@@ -7,7 +7,7 @@ namespace Jonty.Blog.Web
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddApplication<BlogWebModule>();
+            services.AddApplication<JontyBlogHttpApiHostingModule>();
         }
 
         public void Configure(IApplicationBuilder app)

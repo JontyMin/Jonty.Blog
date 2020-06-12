@@ -10,8 +10,11 @@ namespace Jonty.Blog.Web
     //新建此类后安装abp autofac依赖
     //Install-Package Volo.Abp.Autofac
 
+    //abp中每个模块都应自定义一个模块类，派生自AbpModule
+
     [DependsOn(typeof(AbpAspNetCoreModule),
-        typeof(AbpAutofacModule))]
+        typeof(AbpAutofacModule),
+        typeof(JontyBlogHttpApiModule))]
     public class JontyBlogHttpApiHostingModule:AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
@@ -32,6 +35,13 @@ namespace Jonty.Blog.Web
             }
 
             //路由
+            app.UseRouting();
+
+            //路由映射
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

@@ -4,19 +4,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Jonty.Blog</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Jonty.Blog.Application.Contracts\Jonty.Blog.Application.Contracts.csproj" />
+    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="2.9.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.Account.HttpApi" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi" Version="2.9.0" />
+    <ProjectReference Include="..\Jonty.Blog.Application\Jonty.Blog.Application.csproj" />
   </ItemGroup>
 
 </Project>
