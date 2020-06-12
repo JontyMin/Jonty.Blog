@@ -9,7 +9,9 @@
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="2.9.0" />
   </ItemGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\Jonty.Blog.HttpApi.Hosting\Jonty.Blog.HttpApi.xml</DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Jonty.Blog.Application\Jonty.Blog.Application.csproj" />
   </ItemGroup>

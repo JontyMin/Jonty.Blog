@@ -1,7 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <Import Project="..\..\common.props" />
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore" Version="2.7.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
 
+    <ProjectReference Include="..\Jonty.Blog.Domain\Jonty.Blog.Domain.csproj" />
+  </ItemGroup>
 </Project>

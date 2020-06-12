@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Jonty.Blog.Swagger;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
 using Volo.Abp;
 using Volo.Abp.AspNetCore;
@@ -14,7 +15,10 @@ namespace Jonty.Blog.Web
 
     [DependsOn(typeof(AbpAspNetCoreModule),
         typeof(AbpAutofacModule),
-        typeof(JontyBlogHttpApiModule))]
+        typeof(JontyBlogHttpApiModule),
+        typeof(JontyBlogHttpApiModule),
+        typeof(JontyBlogSwaggerModule),
+        typeof(JontyBlogFrameworkCoreModule))]
     public class JontyBlogHttpApiHostingModule:AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

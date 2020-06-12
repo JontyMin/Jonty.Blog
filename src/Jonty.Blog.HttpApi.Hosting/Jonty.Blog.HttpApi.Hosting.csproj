@@ -9,7 +9,11 @@
 
   <ItemGroup>
     
+    <ProjectReference Include="..\Jonty.Blog.EntityFrameworkCore\Jonty.Blog.EntityFrameworkCore.csproj" />
+    
     <ProjectReference Include="..\Jonty.Blog.HttpApi\Jonty.Blog.HttpApi.csproj" />
+    
+    <ProjectReference Include="..\Jonty.Blog.Swagger\Jonty.Blog.Swagger.csproj" />
    
     <PackageReference Include="Volo.Abp.Autofac" Version="2.9.0" />
    
