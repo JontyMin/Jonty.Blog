@@ -10,17 +10,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Jonty.Blog.Domain.Shared\Jonty.Blog.Domain.Shared.csproj" />
   </ItemGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>..\Jonty.Blog.HttpApi.Hosting\Jonty.Blog.Application.Contracts.xml</DocumentationFile>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Identity.Domain" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.IdentityServer.Domain" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.IdentityServer" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.BackgroundJobs.Domain" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.AuditLogging.Domain" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.TenantManagement.Domain" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.FeatureManagement.Domain" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.SettingManagement.Domain" Version="2.9.0" />
   </ItemGroup>
 
 </Project>

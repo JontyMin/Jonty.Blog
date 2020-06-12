@@ -1,7 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+  <Import Project="..\..\common.props" />
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
+    <PackageReference Include="Volo.Abp.Caching" Version="2.7.0" />
+
+    <ProjectReference Include="..\Jonty.Blog.Application.Contracts\Jonty.Blog.Application.Contracts.csproj" />
+    <ProjectReference Include="..\Jonty.Blog.Domain.Shared\Jonty.Blog.Domain.Shared.csproj" />
+    <ProjectReference Include="..\Jonty.Blog.Domain\Jonty.Blog.Domain.csproj" />
+    <ProjectReference Include="..\Jonty.Blog.ToolKits\Jonty.Blog.ToolKits.csproj" />
+  </ItemGroup>
 
 </Project>
