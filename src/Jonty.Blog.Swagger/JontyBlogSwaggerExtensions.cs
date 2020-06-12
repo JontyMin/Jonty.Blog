@@ -12,7 +12,7 @@ namespace Jonty.Blog.Swagger
         {
             return services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1.0",new OpenApiInfo()
+                options.SwaggerDoc("v1",new OpenApiInfo()
                 {
                     Version = "1.0.0",
                     Title = "JontyBlog API",
