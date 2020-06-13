@@ -4,5 +4,130 @@
         <name>Jonty.Blog.Domain</name>
     </assembly>
     <members>
+        <member name="T:Jonty.Blog.Domain.Blog.Category">
+            <summary>
+            Category 
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.Category.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.Category.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
+        <member name="T:Jonty.Blog.Domain.Blog.FriendLink">
+            <summary>
+            FriendLink
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.FriendLink.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.FriendLink.LinkUrl">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="T:Jonty.Blog.Domain.Blog.Post">
+            <summary>
+            Post
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.Post.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.Post.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.Post.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.Post.Html">
+            <summary>
+            Html
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.Post.Markdown">
+            <summary>
+            Markdown
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.Post.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.Post.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Jonty.Blog.Domain.Blog.PostTag">
+            <summary>
+            PostTag
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.PostTag.PostId">
+            <summary>
+            文章Id
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.PostTag.TagId">
+            <summary>
+            标签Id
+            </summary>
+        </member>
+        <member name="T:Jonty.Blog.Domain.Blog.Tag">
+            <summary>
+            Tag
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.Tag.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Blog.Tag.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
+        <member name="T:Jonty.Blog.Configurations.AppSettings">
+            <summary>
+            appsettings.json配置文件数据读取类
+            </summary>
+        </member>
+        <member name="F:Jonty.Blog.Configurations.AppSettings._config">
+            <summary>
+            配置文件根节点
+            </summary>
+        </member>
+        <member name="M:Jonty.Blog.Configurations.AppSettings.#cctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Configurations.AppSettings.EnableDb">
+            <summary>
+            EnableDb
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Configurations.AppSettings.ConnectionStrings">
+            <summary>
+            ConnectionStrings
+            </summary>
+        </member>
     </members>
 </doc>

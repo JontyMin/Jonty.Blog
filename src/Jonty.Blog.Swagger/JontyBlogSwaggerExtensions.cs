@@ -27,6 +27,8 @@ namespace Jonty.Blog.Swagger
 
         public static void UseSwaggerUI(this IApplicationBuilder app)
         {
+            //SwaggerDoc SwaggerEndpoint 对应api版本号相同 v1-v1
+
             //app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
