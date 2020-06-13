@@ -1,4 +1,4 @@
-﻿namespace Jonty.Blog.Domain
+﻿namespace Jonty.Blog
 {
     public class JontyBlogDbConsts
     {

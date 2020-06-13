@@ -37,9 +37,6 @@ namespace Jonty.Blog
                     case "SqlServer":
                         options.UseSqlServer();
                         break;
-                    case "Sqlite":
-                        options.UseSqlite();
-                        break;
                     default:
                         options.UseMySQL();
                         break;

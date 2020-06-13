@@ -41,14 +41,6 @@ namespace Jonty.Blog
                 options.Property(x => x.DisplayName).HasMaxLength(50).IsRequired();
             });
 
-            builder.Entity<Tag>(options =>
-            {
-                options.ToTable(JontyBlogConsts.DbTablePrefix + JontyBlogDbConsts.DbTableName.Tags);
-                options.HasKey(x => x.Id);
-                options.Property(x => x.TagName).HasMaxLength(50).IsRequired();
-                options.Property(x => x.DisplayName).HasMaxLength(50).IsRequired();
-            });
-
             builder.Entity<PostTag>(options =>
             {
                 options.ToTable(JontyBlogConsts.DbTablePrefix + JontyBlogDbConsts.DbTableName.PostTags);

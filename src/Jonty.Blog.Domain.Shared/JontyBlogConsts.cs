@@ -1,4 +1,4 @@
-﻿namespace Jonty.Blog.Domain
+﻿namespace Jonty.Blog
 {
     /// <summary>
     /// 全局常量
