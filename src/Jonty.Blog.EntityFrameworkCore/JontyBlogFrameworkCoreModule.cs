@@ -16,8 +16,7 @@ namespace Jonty.Blog
         typeof(AbpEntityFrameworkCoreMySQLModule),
         typeof(AbpEntityFrameworkCoreSqlServerModule),
         typeof(AbpEntityFrameworkCorePostgreSqlModule),
-        typeof(AbpEntityFrameworkCoreSqliteModule),
-        typeof(JontyBlogDbContext))]
+        typeof(AbpEntityFrameworkCoreSqliteModule))]
     public class JontyBlogFrameworkCoreModule:AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

@@ -4,5 +4,40 @@
         <name>Jonty.Blog.Application.Contracts</name>
     </assembly>
     <members>
+        <member name="P:Jonty.Blog.Blog.PostDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Blog.PostDto.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Blog.PostDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Blog.PostDto.Html">
+            <summary>
+            Html
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Blog.PostDto.Markdown">
+            <summary>
+            Markdown
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Blog.PostDto.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Blog.PostDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
     </members>
 </doc>

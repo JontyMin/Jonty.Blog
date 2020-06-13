@@ -89,6 +89,45 @@
             标签Id
             </summary>
         </member>
+        <member name="T:Jonty.Blog.Domain.Blog.Repositories.ICategoryRepository">
+            <summary>
+            IPostTagRepository
+            </summary>
+        </member>
+        <member name="T:Jonty.Blog.Domain.Blog.Repositories.IFriendLinkRepository">
+            <summary>
+            IFriendLinkRepository
+            </summary>
+        </member>
+        <member name="T:Jonty.Blog.Domain.Blog.Repositories.IPostRepository">
+            <summary>
+            IPostTagRepository
+            </summary>
+        </member>
+        <member name="T:Jonty.Blog.Domain.Blog.Repositories.IPostTagRepository">
+            <summary>
+            IPostTagRepository
+            </summary>
+        </member>
+        <member name="M:Jonty.Blog.Domain.Blog.Repositories.IPostTagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Jonty.Blog.Domain.Blog.PostTag})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="postTags"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Jonty.Blog.Domain.Blog.Repositories.ITagRepository">
+            <summary>
+            IPostTagRepository
+            </summary>
+        </member>
+        <member name="M:Jonty.Blog.Domain.Blog.Repositories.ITagRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Jonty.Blog.Domain.Blog.Tag})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="tags"></param>
+            <returns></returns>
+        </member>
         <member name="T:Jonty.Blog.Domain.Blog.Tag">
             <summary>
             Tag

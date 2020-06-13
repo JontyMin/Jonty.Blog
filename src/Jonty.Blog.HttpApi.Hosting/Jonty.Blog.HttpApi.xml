@@ -4,5 +4,34 @@
         <name>Jonty.Blog.HttpApi</name>
     </assembly>
     <members>
+        <member name="M:Jonty.Blog.Controllers.BlogController.InsertPostAsync(Jonty.Blog.Blog.PostDto)">
+            <summary>
+            添加博客
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.Controllers.BlogController.DeletePostAsync(System.Int32)">
+            <summary>
+            删除博客
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.Controllers.BlogController.UpdatePostAsync(System.Int32,Jonty.Blog.Blog.PostDto)">
+            <summary>
+            更新博客
+            </summary>
+            <param name="id"></param>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.Controllers.BlogController.GetPostAsync(System.Int32)">
+            <summary>
+            查询博客
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
