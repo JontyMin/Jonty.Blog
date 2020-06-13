@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Jonty.Blog.Blog;
+using Jonty.Blog.ToolKits.Base;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
@@ -23,7 +24,7 @@ namespace Jonty.Blog.Controllers
         /// <param name="dto"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<bool> InsertPostAsync([FromBody] PostDto dto)
+        public async Task<ServiceResult<string>> InsertPostAsync([FromBody] PostDto dto)
         {
             return await _blogService.InsertPostAsync(dto);
         }
@@ -33,7 +34,7 @@ namespace Jonty.Blog.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete]
-        public async Task<bool> DeletePostAsync([Required] int id)
+        public async Task<ServiceResult> DeletePostAsync([Required] int id)
         {
             return await _blogService.DeletePostAsync(id);
         }
@@ -44,7 +45,7 @@ namespace Jonty.Blog.Controllers
         /// <param name="dto"></param>
         /// <returns></returns>
         [HttpPut]
-        public async Task<bool> UpdatePostAsync([Required] int id, [FromBody] PostDto dto)
+        public async Task<ServiceResult<string>> UpdatePostAsync([Required] int id, [FromBody] PostDto dto)
         {
             return await _blogService.UpdatePostAsync(id, dto);
         }
@@ -54,7 +55,7 @@ namespace Jonty.Blog.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<PostDto> GetPostAsync([Required] int id)
+        public async Task<ServiceResult<PostDto>> GetPostAsync([Required] int id)
         {
             return await _blogService.GetPostAsync(id);
         }
