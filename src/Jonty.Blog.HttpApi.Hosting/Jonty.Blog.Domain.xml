@@ -168,5 +168,10 @@
             ConnectionStrings
             </summary>
         </member>
+        <member name="P:Jonty.Blog.Configurations.AppSettings.ApiVersion">
+            <summary>
+            ApiVersion
+            </summary>
+        </member>
     </members>
 </doc>
