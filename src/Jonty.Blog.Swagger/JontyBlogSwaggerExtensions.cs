@@ -101,8 +101,8 @@ namespace Jonty.Blog.Swagger
                     Type = SecuritySchemeType.ApiKey
                 };
 
-                options.AddSecurityDefinition("oauth2",security);
-                options.AddSecurityRequirement(new OpenApiSecurityRequirement {{security,new List<string>()}});
+                options.AddSecurityDefinition("oauth2", security);
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement { { security, new List<string>() } });
                 options.OperationFilter<AddResponseHeadersFilter>();
                 options.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
                 options.OperationFilter<SecurityRequirementsOperationFilter>();
