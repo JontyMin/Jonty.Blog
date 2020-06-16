@@ -143,6 +143,70 @@
             展示名称
             </summary>
         </member>
+        <member name="P:Jonty.Blog.Domain.HotNews.HotNews.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.HotNews.HotNews.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.HotNews.HotNews.SourceId">
+            <summary>
+            SourceId
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.HotNews.HotNews.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="T:Jonty.Blog.Domain.HotNews.Repositories.IHotNewsRepository">
+            <summary>
+            IHotNewsRepository
+            </summary>
+        </member>
+        <member name="M:Jonty.Blog.Domain.HotNews.Repositories.IHotNewsRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Jonty.Blog.Domain.HotNews.HotNews})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="hotNews"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Jonty.Blog.Domain.Wallpaper.Repositories.IWallpaperRepository">
+            <summary>
+            IWallpaperRepository
+            </summary>
+        </member>
+        <member name="M:Jonty.Blog.Domain.Wallpaper.Repositories.IWallpaperRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Jonty.Blog.Domain.Wallpaper.Wallpaper})">
+            <summary>
+            批量插入
+            </summary>
+            <param name="wallpapers"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Wallpaper.Wallpaper.Url">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Wallpaper.Wallpaper.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Wallpaper.Wallpaper.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Wallpaper.Wallpaper.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
         <member name="T:Jonty.Blog.Configurations.AppSettings">
             <summary>
             appsettings.json配置文件数据读取类

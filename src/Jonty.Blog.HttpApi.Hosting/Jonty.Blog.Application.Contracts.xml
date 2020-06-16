@@ -39,5 +39,15 @@
             创建时间
             </summary>
         </member>
+        <member name="P:Jonty.Blog.Wallpaper.WallpaperJobItem`1.Result">
+            <summary>
+            <see cref="P:Jonty.Blog.Wallpaper.WallpaperJobItem`1.Result"/>
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Wallpaper.WallpaperJobItem`1.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
     </members>
 </doc>

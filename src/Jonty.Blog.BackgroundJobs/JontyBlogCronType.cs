@@ -18,6 +18,16 @@ namespace Jonty.Blog.BackgroundJobs
             return "1 0/" + interval.ToString() + " * * * ? ";
         }
         /// <summary>
+        /// 周期性为小时的任务
+        /// </summary>
+        /// <param name="minute">第几分钟开始，默认为第一分钟</param>
+        /// <param name="interval">执行周期的间隔，默认为每小时一次</param>
+        /// <returns></returns>
+        public static string Hour(int minute = 1, int interval = 1)
+        {
+            return "1 " + minute + " 0/" + interval.ToString() + " * * ? ";
+        }
+        /// <summary>
         /// 周期性为天的任务
         /// </summary>
         /// <param name="hour">第几小时开始，默认从1点开始</param>

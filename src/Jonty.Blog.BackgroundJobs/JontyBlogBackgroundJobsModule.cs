@@ -57,7 +57,10 @@ namespace Jonty.Blog.BackgroundJobs
             // 获取IServiceProvider
             var service = context.ServiceProvider;
             // 调用定时任务
-            service.UseHangfireTest();
+            //service.UseHangfireTest();
+
+            //定时抓取图片
+            service.UseWallpaperJob();
         }
     }
 }

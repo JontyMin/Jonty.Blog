@@ -1,6 +1,8 @@
 ﻿using System.Reflection.Emit;
 using Jonty.Blog.Domain;
 using Jonty.Blog.Domain.Blog;
+using Jonty.Blog.Domain.HotNews;
+using Jonty.Blog.Domain.Wallpaper;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
 
@@ -55,6 +57,27 @@ namespace Jonty.Blog
                 options.HasKey(x => x.Id);
                 options.Property(x => x.Title).HasMaxLength(20).IsRequired();
                 options.Property(x => x.LinkUrl).HasMaxLength(100).IsRequired();
+            });
+            builder.Entity<Wallpaper>(b =>
+            {
+                b.ToTable(JontyBlogConsts.DbTablePrefix + JontyBlogDbConsts.DbTableName.Wallpapers);
+                b.HasKey(x => x.Id);
+                b.Property(x => x.Id).ValueGeneratedOnAdd();
+                b.Property(x => x.Url).HasMaxLength(200).IsRequired();
+                b.Property(x => x.Title).HasMaxLength(100).IsRequired();
+                b.Property(x => x.Type).HasColumnType("int").IsRequired();
+                b.Property(x => x.CreateTime).HasColumnType("datetime").IsRequired();
+            });
+
+            builder.Entity<HotNews>(b =>
+            {
+                b.ToTable(JontyBlogConsts.DbTablePrefix + JontyBlogDbConsts.DbTableName.HotNews);
+                b.HasKey(x => x.Id);
+                b.Property(x => x.Id).ValueGeneratedOnAdd();
+                b.Property(x => x.Title).HasMaxLength(200).IsRequired();
+                b.Property(x => x.Url).HasMaxLength(250).IsRequired();
+                b.Property(x => x.SourceId).HasColumnType("int").IsRequired();
+                b.Property(x => x.CreateTime).HasColumnType("datetime").IsRequired();
             });
         }
     }

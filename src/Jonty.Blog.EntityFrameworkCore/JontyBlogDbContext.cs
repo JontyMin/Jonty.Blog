@@ -1,4 +1,6 @@
 ﻿using Jonty.Blog.Domain.Blog;
+using Jonty.Blog.Domain.HotNews;
+using Jonty.Blog.Domain.Wallpaper;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
@@ -24,5 +26,7 @@ namespace Jonty.Blog
         public DbSet<Tag> Tags { get; set; }
         public DbSet<PostTag> PostTags { get; set; }
         public DbSet<FriendLink> FriendLinks { get; set; }
+        public DbSet<Wallpaper> Wallpapers { get; set; }
+        public DbSet<HotNews> HotNews { get; set; }
     }
 }
