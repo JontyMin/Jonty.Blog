@@ -4,4 +4,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Hangfire.Dashboard.BasicAuthorization" Version="1.0.2" />
+    <PackageReference Include="Hangfire.MySql.Core" Version="2.2.5" />
+    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="3.1.2" />
+    <PackageReference Include="Volo.Abp.AspNetCore" Version="2.9.0" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.HangFire" Version="2.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jonty.Blog.Domain\Jonty.Blog.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

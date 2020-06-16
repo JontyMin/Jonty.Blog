@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using Jonty.Blog.BackgroundJobs;
+using Jonty.Blog.BackgroundJobs.Jobs;
 using Jonty.Blog.Configurations;
 using Jonty.Blog.Swagger;
 using Jonty.Blog.ToolKits.Base;
@@ -31,7 +33,8 @@ namespace Jonty.Blog.Web
         typeof(JontyBlogHttpApiModule),
         typeof(JontyBlogHttpApiModule),
         typeof(JontyBlogSwaggerModule),
-        typeof(JontyBlogFrameworkCoreModule))]
+        typeof(JontyBlogFrameworkCoreModule),
+        typeof(JontyBlogBackgroundJobsModule))]
     public class JontyBlogHttpApiHostingModule:AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
@@ -64,7 +67,7 @@ namespace Jonty.Blog.Web
                     };
 
                     //应用程序提供的对象，用于处理承载引发的事件，身份验证处理程序
-                    /*options.Events = new JwtBearerEvents
+                    options.Events = new JwtBearerEvents
                     {
                         OnChallenge = async context =>
                         {
@@ -79,7 +82,7 @@ namespace Jonty.Blog.Web
 
                             await context.Response.WriteAsync(result.ToJson());
                         }
-                    };*/
+                    };
                 });
 
             // 认证授权
@@ -87,6 +90,7 @@ namespace Jonty.Blog.Web
             // Http请求
             context.Services.AddHttpClient();
 
+            //异常处理
             Configure<MvcOptions>(options =>
             {
                 var filterMetadata = options.Filters.FirstOrDefault(x => x is ServiceFilterAttribute attribute && attribute.ServiceType.Equals(typeof(AbpExceptionFilter)));
@@ -97,6 +101,9 @@ namespace Jonty.Blog.Web
                 // 添加JontyExceptionFilter
                 options.Filters.Add(typeof(JontyBlogExceptionFilter));
             });
+
+            //测试定时任务
+            //context.Services.AddTransient<IHostedService, HelloWorldJob>();
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)

@@ -9,6 +9,8 @@
 
   <ItemGroup>
     
+    <ProjectReference Include="..\Jonty.Blog.BackgroundJobs\Jonty.Blog.BackgroundJobs.csproj" />
+    
     <ProjectReference Include="..\Jonty.Blog.EntityFrameworkCore\Jonty.Blog.EntityFrameworkCore.csproj" />
     
     <ProjectReference Include="..\Jonty.Blog.HttpApi\Jonty.Blog.HttpApi.csproj" />
