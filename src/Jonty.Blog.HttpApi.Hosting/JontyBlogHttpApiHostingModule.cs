@@ -11,6 +11,7 @@ using Jonty.Blog.Web.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -104,6 +105,15 @@ namespace Jonty.Blog.Web
 
             //测试定时任务
             //context.Services.AddTransient<IHostedService, HelloWorldJob>();
+
+            //路由规则配置
+            context.Services.AddRouting(options =>
+            {
+                // 设置URL小写
+                options.LowercaseUrls = true;
+                // 在生成的URL后面添加斜杠
+                options.AppendTrailingSlash = true;
+            });
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
@@ -117,9 +127,20 @@ namespace Jonty.Blog.Web
                 //生成异常页面
                 app.UseDeveloperExceptionPage();
             }
+            //严格传输安全头
+            app.UseHsts();
+
+            // 转发将标头代理到当前请求，配合 Nginx 使用，获取用户真实IP
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
 
             //路由
             app.UseRouting();
+
+            //跨域
+            app.UseCors();
 
             // 异常处理中间件
             app.UseMiddleware<ExceptionHandlerMiddleware>();
@@ -129,6 +150,9 @@ namespace Jonty.Blog.Web
 
             //认证授权
             app.UseAuthorization();
+            
+            // HTTP => HTTPS
+            app.UseHttpsRedirection();
 
             //路由映射
             app.UseEndpoints(endpoints =>
