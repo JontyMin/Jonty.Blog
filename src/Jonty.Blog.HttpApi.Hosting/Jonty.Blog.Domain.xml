@@ -183,6 +183,11 @@
             JWT
             </summary>
         </member>
+        <member name="T:Jonty.Blog.Configurations.AppSettings.Caching">
+            <summary>
+            Caching
+            </summary>
+        </member>
         <member name="F:Jonty.Blog.Configurations.GitHubConfig.API_Authorize">
             <summary>
             GET请求，跳转GitHub登录界面，获取用户授权，得到code

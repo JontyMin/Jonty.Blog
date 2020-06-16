@@ -17,7 +17,7 @@ namespace Jonty.Blog.Application.Caching
             {
                 options.Configuration = AppSettings.Caching.RedisConnectionString;
                 //实例名
-                options.InstanceName = "blog-redis";
+                //options.InstanceName = "blog-redis";
                 //options.ConfigurationOptions
             });
         }
