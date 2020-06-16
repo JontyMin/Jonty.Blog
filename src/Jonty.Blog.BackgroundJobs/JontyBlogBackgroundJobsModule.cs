@@ -61,6 +61,9 @@ namespace Jonty.Blog.BackgroundJobs
 
             //定时抓取图片
             service.UseWallpaperJob();
+
+            //热点数据抓取
+            service.UseHotNewsJob();
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace Jonty.Blog.Wallpaper
+﻿namespace Jonty.Blog.HotNews
 {
-    public  class WallpaperJobItem<T>
+    public class HotNewsJobItem<T>
     {
         /// <summary>
         /// <see cref="Result"/>
@@ -8,8 +8,8 @@
         public T Result { get; set; }
 
         /// <summary>
-        /// 类型
+        /// 来源
         /// </summary>
-        public WallpaperEnum Type { get; set; }
+        public HotNewsEnum Source { get; set; }
     }
 }
