@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace Jonty.Blog
+namespace Jonty.Blog.EntityFrameworkCore.DbMigrations
 {
     public class JontyBlogMigrationsDbContext:AbpDbContext<JontyBlogMigrationsDbContext>
     {

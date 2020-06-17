@@ -1,12 +1,11 @@
-﻿using System.Reflection.Emit;
-using Jonty.Blog.Domain;
-using Jonty.Blog.Domain.Blog;
+﻿using Jonty.Blog.Domain.Blog;
 using Jonty.Blog.Domain.HotNews;
+using Jonty.Blog.Domain.Shared;
 using Jonty.Blog.Domain.Wallpaper;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
 
-namespace Jonty.Blog
+namespace Jonty.Blog.EntityFrameworkCore
 {
     public static class JontyBlogDbContextModelCreatingExtensions
     {

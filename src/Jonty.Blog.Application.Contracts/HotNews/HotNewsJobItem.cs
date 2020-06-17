@@ -1,4 +1,6 @@
-﻿namespace Jonty.Blog.HotNews
+﻿using Jonty.Blog.Domain.Shared.Enum;
+
+namespace Jonty.Blog.Application.Contracts.HotNews
 {
     public class HotNewsJobItem<T>
     {

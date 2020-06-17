@@ -2,7 +2,8 @@
 using System.Linq;
 using Jonty.Blog.BackgroundJobs;
 using Jonty.Blog.BackgroundJobs.Jobs;
-using Jonty.Blog.Configurations;
+using Jonty.Blog.Domain.Configurations;
+using Jonty.Blog.EntityFrameworkCore;
 using Jonty.Blog.Swagger;
 using Jonty.Blog.ToolKits.Base;
 using Jonty.Blog.ToolKits.Extensions;

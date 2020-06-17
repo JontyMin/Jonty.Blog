@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Jonty.Blog.Blog;
+using Jonty.Blog.Application.Contracts.Blog;
 using Jonty.Blog.Domain.Blog;
 
-namespace Jonty.Blog
+namespace Jonty.Blog.Application
 {
     public class JontyBlogAutoMapperProfile:Profile
     {

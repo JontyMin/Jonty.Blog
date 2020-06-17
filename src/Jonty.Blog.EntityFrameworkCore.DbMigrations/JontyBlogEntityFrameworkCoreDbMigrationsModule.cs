@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Modularity;
 
-namespace Jonty.Blog
+namespace Jonty.Blog.EntityFrameworkCore.DbMigrations
 {
     [DependsOn(typeof(JontyBlogFrameworkCoreModule))]
     public class JontyBlogEntityFrameworkCoreDbMigrationsModule:AbpModule

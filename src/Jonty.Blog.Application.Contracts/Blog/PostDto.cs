@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Jonty.Blog.Blog
+namespace Jonty.Blog.Application.Contracts.Blog
 {
     public class PostDto
     {

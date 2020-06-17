@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using Jonty.Blog.Configurations;
+using Jonty.Blog.Domain.Configurations;
+using Jonty.Blog.Domain.Shared;
 using Jonty.Blog.Swagger.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;

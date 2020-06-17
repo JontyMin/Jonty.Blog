@@ -5,7 +5,7 @@ using Jonty.Blog.Domain.HotNews.Repositories;
 using Volo.Abp.Domain.Repositories.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace Jonty.Blog.Repositories.HotNews
+namespace Jonty.Blog.EntityFrameworkCore.Repositories.HotNews
 {
     public class HotNewsRepository:EfCoreRepository<JontyBlogDbContext,Domain.HotNews.HotNews,Guid>,IHotNewsRepository
     {

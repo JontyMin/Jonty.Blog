@@ -3,7 +3,7 @@ using Jonty.Blog.Domain.Blog.Repositories;
 using Volo.Abp.Domain.Repositories.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace Jonty.Blog.Repositories.Blog
+namespace Jonty.Blog.EntityFrameworkCore.Repositories.Blog
 {
     /// <summary>
     /// CategoryRepository

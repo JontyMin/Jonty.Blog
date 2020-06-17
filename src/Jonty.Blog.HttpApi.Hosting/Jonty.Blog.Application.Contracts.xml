@@ -4,57 +4,202 @@
         <name>Jonty.Blog.Application.Contracts</name>
     </assembly>
     <members>
-        <member name="P:Jonty.Blog.Blog.PostDto.Title">
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.CategoryDto.CategoryName">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.CategoryDto.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.FriendLinkDto.Title">
             <summary>
             标题
             </summary>
         </member>
-        <member name="P:Jonty.Blog.Blog.PostDto.Author">
-            <summary>
-            作者
-            </summary>
-        </member>
-        <member name="P:Jonty.Blog.Blog.PostDto.Url">
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.FriendLinkDto.LinkUrl">
             <summary>
             链接
             </summary>
         </member>
-        <member name="P:Jonty.Blog.Blog.PostDto.Html">
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostBriefDto.Title">
             <summary>
-            Html
+            标题
             </summary>
         </member>
-        <member name="P:Jonty.Blog.Blog.PostDto.Markdown">
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostBriefDto.Url">
             <summary>
-            Markdown
+            链接
             </summary>
         </member>
-        <member name="P:Jonty.Blog.Blog.PostDto.CategoryId">
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostBriefDto.Year">
             <summary>
-            分类Id
+            年份
             </summary>
         </member>
-        <member name="P:Jonty.Blog.Blog.PostDto.CreationTime">
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostBriefDto.CreationTime">
             <summary>
             创建时间
             </summary>
         </member>
-        <member name="P:Jonty.Blog.HotNews.HotNewsJobItem`1.Result">
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDetailDto.Title">
             <summary>
-            <see cref="P:Jonty.Blog.HotNews.HotNewsJobItem`1.Result"/>
+            标题
             </summary>
         </member>
-        <member name="P:Jonty.Blog.HotNews.HotNewsJobItem`1.Source">
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDetailDto.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDetailDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDetailDto.Html">
+            <summary>
+            HTML
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDetailDto.Markdown">
+            <summary>
+            Markdown
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDetailDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDetailDto.Category">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDetailDto.Tags">
+            <summary>
+            标签列表
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDetailDto.Previous">
+            <summary>
+            上一篇
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDetailDto.Next">
+            <summary>
+            下一篇
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDto.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDto.Html">
+            <summary>
+            Html
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDto.Markdown">
+            <summary>
+            Markdown
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDto.CategoryId">
+            <summary>
+            分类Id
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDto.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostForPagedDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostForPagedDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryCategoryDto.Count">
+            <summary>
+            总数
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryPostDto.Year">
+            <summary>
+            年份
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryPostDto.Posts">
+            <summary>
+            Posts
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryTagDto.Count">
+            <summary>
+            总数
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.TagDto.TagName">
+            <summary>
+            标签名称
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.TagDto.DisplayName">
+            <summary>
+            展示名称
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.HotNews.HotNewsJobItem`1.Result">
+            <summary>
+            <see cref="P:Jonty.Blog.Application.Contracts.HotNews.HotNewsJobItem`1.Result"/>
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.HotNews.HotNewsJobItem`1.Source">
             <summary>
             来源
             </summary>
         </member>
-        <member name="P:Jonty.Blog.Wallpaper.WallpaperJobItem`1.Result">
+        <member name="T:Jonty.Blog.Application.Contracts.PagingInput">
             <summary>
-            <see cref="P:Jonty.Blog.Wallpaper.WallpaperJobItem`1.Result"/>
+            分页输入参数
             </summary>
         </member>
-        <member name="P:Jonty.Blog.Wallpaper.WallpaperJobItem`1.Type">
+        <member name="P:Jonty.Blog.Application.Contracts.PagingInput.Page">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.PagingInput.Limit">
+            <summary>
+            限制条数
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Wallpaper.WallpaperJobItem`1.Result">
+            <summary>
+            <see cref="P:Jonty.Blog.Application.Contracts.Wallpaper.WallpaperJobItem`1.Result"/>
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Wallpaper.WallpaperJobItem`1.Type">
             <summary>
             类型
             </summary>

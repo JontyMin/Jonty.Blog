@@ -1,5 +1,5 @@
-﻿using Jonty.Blog.Configurations;
-using Jonty.Blog.Domain;
+﻿using Jonty.Blog.Domain;
+using Jonty.Blog.Domain.Configurations;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Caching;
 using Volo.Abp.Modularity;

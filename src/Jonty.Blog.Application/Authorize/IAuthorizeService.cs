@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Jonty.Blog.ToolKits.Base;
 
-namespace Jonty.Blog.Authorize
+namespace Jonty.Blog.Application.Authorize
 {
     public interface IAuthorizeService
     {

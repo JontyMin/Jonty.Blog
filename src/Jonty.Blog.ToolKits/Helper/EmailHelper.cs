@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using Jonty.Blog.Configurations;
+using Jonty.Blog.Domain.Configurations;
 using MailKit.Net.Smtp;
 using MimeKit;
 

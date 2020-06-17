@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace Jonty.Blog.Configurations
+namespace Jonty.Blog.Domain.Configurations
 {
     /// <summary>
     /// appsettings.json配置文件数据读取类

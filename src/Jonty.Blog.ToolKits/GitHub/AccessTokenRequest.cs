@@ -1,4 +1,4 @@
-﻿using Jonty.Blog.Configurations;
+﻿using Jonty.Blog.Domain.Configurations;
 
 namespace Jonty.Blog.ToolKits.GitHub
 {

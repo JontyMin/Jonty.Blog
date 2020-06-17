@@ -1,5 +1,5 @@
-﻿using Jonty.Blog.Configurations;
-using Jonty.Blog.Domain;
+﻿using Jonty.Blog.Domain;
+using Jonty.Blog.Domain.Configurations;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.MySQL;
@@ -8,7 +8,7 @@ using Volo.Abp.EntityFrameworkCore.Sqlite;
 using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Volo.Abp.Modularity;
 
-namespace Jonty.Blog
+namespace Jonty.Blog.EntityFrameworkCore
 {
     [DependsOn(
         typeof(JontyBlogDomainModule),

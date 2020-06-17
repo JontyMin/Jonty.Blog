@@ -1,7 +1,8 @@
 ﻿using Hangfire;
 using Hangfire.Dashboard.BasicAuthorization;
 using Hangfire.MySql.Core;
-using Jonty.Blog.Configurations;
+using Jonty.Blog.Domain.Configurations;
+using Jonty.Blog.Domain.Shared;
 using Volo.Abp;
 using Volo.Abp.BackgroundJobs.Hangfire;
 using Volo.Abp.Modularity;

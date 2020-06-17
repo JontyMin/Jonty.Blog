@@ -1,7 +1,4 @@
-﻿using Jonty.Blog.Application;
-using Jonty.Blog.Application.HelloWorld;
-
-namespace Jonty.Blog.HelloWorld.Impl
+﻿namespace Jonty.Blog.Application.HelloWorld.Impl
 {
     public class HelloWorldService:JontyBlogApplicationServiceBase,IHelloWorldService
     {

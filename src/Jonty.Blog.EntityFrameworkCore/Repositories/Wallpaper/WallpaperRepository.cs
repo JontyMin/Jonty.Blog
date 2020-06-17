@@ -5,7 +5,7 @@ using Jonty.Blog.Domain.Wallpaper.Repositories;
 using Volo.Abp.Domain.Repositories.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace Jonty.Blog.Repositories.Wallpaper
+namespace Jonty.Blog.EntityFrameworkCore.Repositories.Wallpaper
 {
     public class WallpaperRepository:EfCoreRepository<JontyBlogDbContext,Domain.Wallpaper.Wallpaper,Guid>,IWallpaperRepository
     {

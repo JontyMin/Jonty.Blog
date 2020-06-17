@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Jonty.Blog
+namespace Jonty.Blog.Domain.Shared.Enum
 {
     public enum WallpaperEnum
     {

@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
-using Jonty.Blog.Authorize;
+using Jonty.Blog.Application.Authorize;
+using Jonty.Blog.Domain.Shared;
 using Jonty.Blog.ToolKits.Base;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

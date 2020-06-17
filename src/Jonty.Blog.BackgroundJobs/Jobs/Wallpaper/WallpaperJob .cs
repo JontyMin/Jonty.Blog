@@ -1,9 +1,10 @@
 ﻿using System;
-using Jonty.Blog.Wallpaper;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
+using Jonty.Blog.Application.Contracts.Wallpaper;
+using Jonty.Blog.Domain.Shared.Enum;
 using Jonty.Blog.Domain.Wallpaper.Repositories;
 using Jonty.Blog.ToolKits.Extensions;
 using Jonty.Blog.ToolKits.Helper;

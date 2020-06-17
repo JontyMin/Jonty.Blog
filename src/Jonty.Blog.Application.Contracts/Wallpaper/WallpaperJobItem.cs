@@ -1,4 +1,6 @@
-﻿namespace Jonty.Blog.Wallpaper
+﻿using Jonty.Blog.Domain.Shared.Enum;
+
+namespace Jonty.Blog.Application.Contracts.Wallpaper
 {
     public  class WallpaperJobItem<T>
     {

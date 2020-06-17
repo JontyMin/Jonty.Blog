@@ -1,8 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Threading;
 using System.Threading.Tasks;
-using Jonty.Blog.Blog;
+using Jonty.Blog.Application.Blog;
+using Jonty.Blog.Application.Contracts;
+using Jonty.Blog.Application.Contracts.Blog;
+using Jonty.Blog.Domain.Shared;
 using Jonty.Blog.ToolKits.Base;
+using Jonty.Blog.ToolKits.Base.Paged;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
@@ -20,6 +24,30 @@ namespace Jonty.Blog.Controllers
         {
             _blogService = blogService;
         }
+
+        /// <summary>
+        /// 分页查询文章列表
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("posts")]
+        public async Task<ServiceResult<PagedList<QueryPostDto>>> QueryPostsAsync([FromQuery] PagingInput input)
+        {
+            return await _blogService.QueryPostsAsync(input);
+        }
+        /// <summary>
+        /// 根据URL获取文章详情
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("post")]
+        public async Task<ServiceResult<PostDetailDto>> GetPostDetailAsync(string url)
+        {
+            return await _blogService.GetPostDetailAsync(url);
+        }
+        /*
         /// <summary>
         /// 添加博客
         /// </summary>
@@ -63,6 +91,6 @@ namespace Jonty.Blog.Controllers
         public async Task<ServiceResult<PostDto>> GetPostAsync([Required] int id)
         {
             return await _blogService.GetPostAsync(id);
-        }
+        }*/
     }
 }

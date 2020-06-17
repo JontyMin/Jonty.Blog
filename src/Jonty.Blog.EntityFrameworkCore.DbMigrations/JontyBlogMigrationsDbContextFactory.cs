@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 
-namespace Jonty.Blog
+namespace Jonty.Blog.EntityFrameworkCore.DbMigrations
 {
     public class JontyBlogMigrationsDbContextFactory:IDesignTimeDbContextFactory<JontyBlogMigrationsDbContext>
     {

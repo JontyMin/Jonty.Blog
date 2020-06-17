@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
-namespace Jonty.Blog
+namespace Jonty.Blog.EntityFrameworkCore
 {
     [ConnectionStringName("MySql")]
     public class JontyBlogDbContext:AbpDbContext<JontyBlogDbContext>

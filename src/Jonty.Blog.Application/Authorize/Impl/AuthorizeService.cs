@@ -6,15 +6,14 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using Jonty.Blog.Application;
 using Jonty.Blog.Application.Caching.Authorize;
-using Jonty.Blog.Configurations;
+using Jonty.Blog.Domain.Configurations;
 using Jonty.Blog.ToolKits.Base;
 using Jonty.Blog.ToolKits.Extensions;
 using Jonty.Blog.ToolKits.GitHub;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Jonty.Blog.Authorize.Impl
+namespace Jonty.Blog.Application.Authorize.Impl
 {
     public class AuthorizeService:JontyBlogApplicationServiceBase, IAuthorizeService
     {

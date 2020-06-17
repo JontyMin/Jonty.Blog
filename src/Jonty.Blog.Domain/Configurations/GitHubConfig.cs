@@ -1,4 +1,4 @@
-﻿namespace Jonty.Blog.Configurations
+﻿namespace Jonty.Blog.Domain.Configurations
 {
     public class GitHubConfig
     {

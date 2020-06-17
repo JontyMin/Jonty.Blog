@@ -1,6 +1,6 @@
 ﻿using System;
 using Jonty.Blog.Application.HelloWorld;
-using Jonty.Blog.HelloWorld;
+using Jonty.Blog.Domain.Shared;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 

@@ -4,7 +4,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Jonty.Blog</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

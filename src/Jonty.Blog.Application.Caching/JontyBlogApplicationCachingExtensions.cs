@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Jonty.Blog.ToolKits.Extensions;
 using Microsoft.Extensions.Caching.Distributed;
-using static Jonty.Blog.JontyBlogConsts;
+using static Jonty.Blog.Domain.Shared.JontyBlogConsts;
 
 namespace Jonty.Blog.Application.Caching
 {
