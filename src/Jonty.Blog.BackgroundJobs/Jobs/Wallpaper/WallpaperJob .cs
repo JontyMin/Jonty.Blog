@@ -1,10 +1,13 @@
-﻿using Jonty.Blog.Wallpaper;
+﻿using System;
+using Jonty.Blog.Wallpaper;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HtmlAgilityPack;
 using Jonty.Blog.Domain.Wallpaper.Repositories;
 using Jonty.Blog.ToolKits.Extensions;
+using Jonty.Blog.ToolKits.Helper;
+using MimeKit;
 
 namespace Jonty.Blog.BackgroundJobs.Jobs.Wallpaper
 {
@@ -83,6 +86,17 @@ namespace Jonty.Blog.BackgroundJobs.Jobs.Wallpaper
             {
                 await _wallpaperRepository.BulkInsertAsync(wallpapers);
             }
+
+            // 发送Email
+           var message = new MimeMessage
+            {
+                Subject = "【定时任务】壁纸数据抓取任务推送",
+                Body = new BodyBuilder
+                {
+                    HtmlBody = $"本次抓取到{wallpapers.Count()}条数据，时间:{DateTime.Now:yyyy-MM-dd HH:mm:ss}"
+                }.ToMessageBody()
+            };
+            await EmailHelper.SendAsync(message);
         }
 
     }

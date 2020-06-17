@@ -8,6 +8,8 @@ using HtmlAgilityPack;
 using Jonty.Blog.Domain.HotNews.Repositories;
 using Jonty.Blog.HotNews;
 using Jonty.Blog.ToolKits.Extensions;
+using Jonty.Blog.ToolKits.Helper;
+using MimeKit;
 using Newtonsoft.Json.Linq;
 
 namespace Jonty.Blog.BackgroundJobs.Jobs.HotNews
@@ -378,6 +380,17 @@ namespace Jonty.Blog.BackgroundJobs.Jobs.HotNews
                 await _hotNewsRepository.DeleteAsync(x => true);
                 await _hotNewsRepository.BulkInsertAsync(hotNews);
             }
+
+            // 发送Email
+            var message = new MimeMessage
+            {
+                Subject = "【定时任务】每日热点数据抓取任务推送",
+                Body = new BodyBuilder
+                {
+                    HtmlBody = $"本次抓取到{hotNews.Count()}条数据，时间:{DateTime.Now:yyyy-MM-dd HH:mm:ss}"
+                }.ToMessageBody()
+            };
+            await EmailHelper.SendAsync(message);
 
         }
     }
