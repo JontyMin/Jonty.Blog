@@ -31,6 +31,13 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.GetPostForAdminAsync(System.Int32)">
+            <summary>
+            获取文章详情
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.InsertPostAsync(Jonty.Blog.Application.Contracts.Blog.Params.EditPostInput)">
             <summary>
             新增文章
@@ -49,6 +56,90 @@
         <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.DeletePostAsync(System.Int32)">
             <summary>
             删除文章
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.QueryCategoriesForAdminAsync">
+            <summary>
+            查询分类列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.InsertCategoryAsync(Jonty.Blog.Application.Contracts.Blog.Params.EditCategoryInput)">
+            <summary>
+            新增分类
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.UpdateCategoryAsync(System.Int32,Jonty.Blog.Application.Contracts.Blog.Params.EditCategoryInput)">
+            <summary>
+            更新分类
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.DeleteCategoryAsync(System.Int32)">
+            <summary>
+            删除分类
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.QueryTagsForAdminAsync">
+            <summary>
+            查询标签列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.InsertTagAsync(Jonty.Blog.Application.Contracts.Blog.Params.EditTagInput)">
+            <summary>
+            新增标签
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.UpdateTagAsync(System.Int32,Jonty.Blog.Application.Contracts.Blog.Params.EditTagInput)">
+            <summary>
+            更新标签
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.DeleteTagAsync(System.Int32)">
+            <summary>
+            删除标签
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.QueryFriendLinksForAdminAsync">
+            <summary>
+            查询友链列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.InsertFriendLinkAsync(Jonty.Blog.Application.Contracts.Blog.Params.EditFriendLinkInput)">
+            <summary>
+            新增友链
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.UpdateFriendLinkAsync(System.Int32,Jonty.Blog.Application.Contracts.Blog.Params.EditFriendLinkInput)">
+            <summary>
+            更新友链
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.DeleteFriendLinkAsync(System.Int32)">
+            <summary>
+            删除友链
             </summary>
             <param name="id"></param>
             <returns></returns>

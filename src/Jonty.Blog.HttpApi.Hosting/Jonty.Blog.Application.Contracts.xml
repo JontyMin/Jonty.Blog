@@ -139,6 +139,11 @@
             创建时间
             </summary>
         </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostForAdminDto.Tags">
+            <summary>
+            标签列表
+            </summary>
+        </member>
         <member name="P:Jonty.Blog.Application.Contracts.Blog.PostForPagedDto.Title">
             <summary>
             标题
@@ -152,6 +157,16 @@
         <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryCategoryDto.Count">
             <summary>
             总数
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryCategoryForAdminDto.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryFriendLinkForAdminDto.Id">
+            <summary>
+            主键
             </summary>
         </member>
         <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryPostDto.Year">
@@ -172,6 +187,11 @@
         <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryTagDto.Count">
             <summary>
             总数
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryTagForAdminDto.Id">
+            <summary>
+            主键
             </summary>
         </member>
         <member name="P:Jonty.Blog.Application.Contracts.Blog.TagDto.TagName">
