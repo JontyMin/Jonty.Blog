@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Threading;
 using System.Threading.Tasks;
 using Jonty.Blog.Application.Blog;
 using Jonty.Blog.Application.Contracts;
@@ -8,16 +7,15 @@ using Jonty.Blog.Application.Contracts.Blog;
 using Jonty.Blog.Domain.Shared;
 using Jonty.Blog.ToolKits.Base;
 using Jonty.Blog.ToolKits.Base.Paged;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 
-namespace Jonty.Blog.Controllers
+namespace Jonty.Blog.HttpApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     [ApiExplorerSettings(GroupName = Grouping.GroupName_v1)]
-    public class BlogController:AbpController
+    public partial class BlogController:AbpController
     {
         private readonly IBlogService _blogService;
 

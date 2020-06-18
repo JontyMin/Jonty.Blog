@@ -24,58 +24,93 @@
             <param name="access_token"></param>
             <returns></returns>
         </member>
-        <member name="M:Jonty.Blog.Controllers.BlogController.QueryPostsAsync(Jonty.Blog.Application.Contracts.PagingInput)">
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.QueryPostsForAdminAsync(Jonty.Blog.Application.Contracts.PagingInput)">
             <summary>
             分页查询文章列表
             </summary>
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="M:Jonty.Blog.Controllers.BlogController.GetPostDetailAsync(System.String)">
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.InsertPostAsync(Jonty.Blog.Application.Contracts.Blog.Params.EditPostInput)">
+            <summary>
+            新增文章
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.UpdatePostAsync(System.Int32,Jonty.Blog.Application.Contracts.Blog.Params.EditPostInput)">
+            <summary>
+            更新文章
+            </summary>
+            <param name="id"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.DeletePostAsync(System.Int32)">
+            <summary>
+            删除文章
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.QueryPostsAsync(Jonty.Blog.Application.Contracts.PagingInput)">
+            <summary>
+            分页查询文章列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.GetPostDetailAsync(System.String)">
             <summary>
             根据URL获取文章详情
             </summary>
             <param name="url"></param>
             <returns></returns>
         </member>
-        <member name="M:Jonty.Blog.Controllers.BlogController.QueryPostsByCategoryAsync(System.String)">
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.QueryPostsByCategoryAsync(System.String)">
             <summary>
             通过分类名称查询文章列表
             </summary>
             <param name="name"></param>
             <returns></returns>
         </member>
-        <member name="M:Jonty.Blog.Controllers.BlogController.QueryPostsByTagAsync(System.String)">
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.QueryPostsByTagAsync(System.String)">
             <summary>
             通过标签名称查询文章列表
             </summary>
             <param name="name"></param>
             <returns></returns>
         </member>
-        <member name="M:Jonty.Blog.Controllers.BlogController.QueryCategoriesAsync">
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.QueryCategoriesAsync">
             <summary>
             查询分类列表
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Jonty.Blog.Controllers.BlogController.GetCategoryAsync(System.String)">
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.GetCategoryAsync(System.String)">
             <summary>
             获取分类名称
             </summary>
             <param name="name"></param>
             <returns></returns>
         </member>
-        <member name="M:Jonty.Blog.Controllers.BlogController.QueryTagsAsync">
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.QueryTagsAsync">
             <summary>
             查询标签列表
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Jonty.Blog.Controllers.BlogController.GetTagAsync(System.String)">
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.GetTagAsync(System.String)">
             <summary>
             获取标签名称
             </summary>
             <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.QueryFriendLinksAsync">
+            <summary>
+            查询友链列表
+            </summary>
             <returns></returns>
         </member>
     </members>

@@ -24,6 +24,11 @@
             链接
             </summary>
         </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.Params.EditPostInput.Tags">
+            <summary>
+            标签列表
+            </summary>
+        </member>
         <member name="P:Jonty.Blog.Application.Contracts.Blog.PostBriefDto.Title">
             <summary>
             标题
@@ -42,6 +47,11 @@
         <member name="P:Jonty.Blog.Application.Contracts.Blog.PostBriefDto.CreationTime">
             <summary>
             创建时间
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.PostBriefForAdminDto.Id">
+            <summary>
+            主键
             </summary>
         </member>
         <member name="P:Jonty.Blog.Application.Contracts.Blog.PostDetailDto.Title">
@@ -150,6 +160,11 @@
             </summary>
         </member>
         <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryPostDto.Posts">
+            <summary>
+            Posts
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Blog.QueryPostForAdminDto.Posts">
             <summary>
             Posts
             </summary>
