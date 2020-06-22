@@ -10,7 +10,7 @@
     <ProjectReference Include="..\Jonty.Blog.Domain.Shared\Jonty.Blog.Domain.Shared.csproj" />
   </ItemGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>..\Jonty.Blog.HttpApi.Hosting\Jonty.Blog.Domain.xml</DocumentationFile>
+    <DocumentationFile>..\Jonty.Blog.HttpApi.Hosting\Resources\Jonty.Blog.Domain.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Identity.Domain" Version="2.9.0" />

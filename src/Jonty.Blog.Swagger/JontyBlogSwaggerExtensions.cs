@@ -23,6 +23,9 @@ namespace Jonty.Blog.Swagger
         /// </summary>
         private static readonly string description = @"<b>Blog</b>：<a target=""_blank"" href=""https://www.jonty.top"">https://www.jonty.top</a> <b>GitHub</b>：<a target=""_blank"" href=""https://github.com/JontyMin/Jonty.Blog"">https://github.com/JontyMin/Jonty.Blog</a> <b>Hangfire</b>：<a target=""_blank"" href=""/hangfire"">任务调度中心</a> <code>Powered by .NET Core 3.1 on Linux</code>";
 
+        /// <summary>
+        /// Swagger分组信息，遍历使用
+        /// </summary>
         private static readonly List<SwaggerApiInfo> ApiInfos = new List<SwaggerApiInfo>()
         {
             new SwaggerApiInfo
@@ -86,8 +89,7 @@ namespace Jonty.Blog.Swagger
                 ApiInfos.ForEach(x =>
                 {
                     options.SwaggerDoc(x.UrlPrefix, x.OpenApiInfo);
-                    //应用Controller的API文档描述信息
-                    options.DocumentFilter<SwaggerDocumentFilter>();
+                    
                 });
 
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Jonty.Blog.HttpApi.xml"));
@@ -96,7 +98,7 @@ namespace Jonty.Blog.Swagger
 
                 var security = new OpenApiSecurityScheme
                 {
-                    Description = "JWT模式授权，请输入Bearer{Token}进行身份认证",
+                    Description = "JWT模式授权，请输入Bearer { Token } 进行身份认证",
                     Name = "Authorization",
                     In = ParameterLocation.Header,
                     Type = SecuritySchemeType.ApiKey
@@ -108,6 +110,8 @@ namespace Jonty.Blog.Swagger
                 options.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
                 options.OperationFilter<SecurityRequirementsOperationFilter>();
 
+                //应用Controller的API文档描述信息
+                options.DocumentFilter<SwaggerDocumentFilter>();
             });
         }
 
@@ -129,7 +133,7 @@ namespace Jonty.Blog.Swagger
                 //API文档仅展开标记
                 options.DocExpansion(DocExpansion.List);
                 // API前缀设置为空
-                options.RoutePrefix = String.Empty;
+                options.RoutePrefix = string.Empty;
                 // API页面Title
                 options.DocumentTitle = "接口文档 - Jonty";
 

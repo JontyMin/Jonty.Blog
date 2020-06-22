@@ -151,6 +151,24 @@ namespace Jonty.Blog.Domain.Configurations
                     return dic;
                 }
             }
+        }  
+        /// <summary>
+        /// RemoveBg
+        /// </summary>
+        public static class RemoveBg
+        {
+            public static string Secret => _config["RemoveBg:Secret"];
+
+            public static string URL => _config["RemoveBg:URL"];
+        }
+        /// <summary>
+        /// 百度AI 语音合成
+        /// </summary>
+        public static class BaiduAI
+        {
+            public static string APIKey => _config["BaiduAI:APIKey"];
+
+            public static string SecretKey => _config["BaiduAI:SecretKey"];
         }
     }
 }
