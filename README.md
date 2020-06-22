@@ -86,23 +86,23 @@ Blog ---------- root
 
 #### 博客前台接口🖊
 
-![](C:/Users/jonty/Desktop/1.png)
+![](images/1.png)
 
 #### JWT身份认证🖍
 
-![](C:/Users/jonty/Desktop/2.png)
+![](images/2.png)
 
 #### 公共接口啊🖋
 
-![](C:/Users/jonty/Desktop/3.png)
+![](images/3.png)
 
-![](C:/Users/jonty/Desktop/5.png)
+![](images/5.png)
 
-![](C:/Users/jonty/Desktop/6.png)
+![](images/6.png)
 
 #### 身份认证接口啊🖌
 
-![](C:/Users/jonty/Desktop/4.png)
+![](images/4.png)
 
 ### 页面展示🔎
 
