@@ -204,6 +204,16 @@
             展示名称
             </summary>
         </member>
+        <member name="P:Jonty.Blog.Application.Contracts.HotNews.HotNewsDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.HotNews.HotNewsDto.Url">
+            <summary>
+            链接
+            </summary>
+        </member>
         <member name="P:Jonty.Blog.Application.Contracts.HotNews.HotNewsJobItem`1.Result">
             <summary>
             <see cref="P:Jonty.Blog.Application.Contracts.HotNews.HotNewsJobItem`1.Result"/>
@@ -212,6 +222,16 @@
         <member name="P:Jonty.Blog.Application.Contracts.HotNews.HotNewsJobItem`1.Source">
             <summary>
             来源
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.HotNews.Params.BulkInsertHotNewsInput.Source">
+            <summary>
+            来源
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.HotNews.Params.BulkInsertHotNewsInput.HotNews">
+            <summary>
+            每日热点列表
             </summary>
         </member>
         <member name="T:Jonty.Blog.Application.Contracts.PagingInput">

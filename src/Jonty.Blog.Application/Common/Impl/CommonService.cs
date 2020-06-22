@@ -286,8 +286,8 @@ namespace Jonty.Blog.Application.Common.Impl
         /// <returns></returns>
         public async Task<ServiceResult<byte[]>> SpeechTtsAsync(string content, int spd, int pit, int vol, int per)
         {
-            //return await _commonCacheService.SpeechTtsAsync(content, spd, pit, vol, per, async () =>
-            //{
+            return await _commonCacheService.SpeechTtsAsync(content, spd, pit, vol, per, async () =>
+            {
                 var result = new ServiceResult<byte[]>();
 
                 var option = new Dictionary<string, object>()
@@ -300,8 +300,8 @@ namespace Jonty.Blog.Application.Common.Impl
 
                 var _ttsClient = new Tts(AppSettings.BaiduAI.APIKey, AppSettings.BaiduAI.SecretKey)
                 {
-                    ApiKey = AppSettings.BaiduAI.APIKey,
-                    SecretKey = AppSettings.BaiduAI.SecretKey,
+                    //ApiKey = AppSettings.BaiduAI.APIKey,
+                    //SecretKey = AppSettings.BaiduAI.SecretKey,
                     AppId = "20504309",
                     Timeout = 60000
                 };
@@ -314,7 +314,7 @@ namespace Jonty.Blog.Application.Common.Impl
                     result.IsFailed(response.ErrorMsg);
 
                 return await Task.FromResult(result);
-            //});
+            });
         }
 
         /// <summary>

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Jonty.Blog.Application.Contracts.Blog;
 using Jonty.Blog.Application.Contracts.Blog.Params;
+using Jonty.Blog.Application.Contracts.HotNews;
 using Jonty.Blog.Domain.Blog;
 
 namespace Jonty.Blog.Application
@@ -17,6 +18,12 @@ namespace Jonty.Blog.Application
             CreateMap<EditTagInput, Tag>().ForMember(x => x.Id, opt => opt.Ignore());
             CreateMap<FriendLink, QueryFriendLinkForAdminDto>();
             CreateMap<EditFriendLinkInput, FriendLink>().ForMember(x => x.Id, opt => opt.Ignore());
+
+            CreateMap<Domain.HotNews.HotNews, HotNewsDto>();
+            CreateMap<HotNewsDto, Domain.HotNews.HotNews>().ForMember(x => x.Id, opt => opt.Ignore())
+                .ForMember(x => x.SourceId, opt => opt.Ignore())
+                .ForMember(x => x.CreateTime, opt => opt.Ignore());
+
         }
     }
 }

@@ -73,6 +73,13 @@ namespace Jonty.Blog.Domain.Configurations
         /// </summary>
         public static class Caching
         {
+            /// <summary>
+            /// 是否开启
+            /// </summary>
+            public static bool IsOpen => Convert.ToBoolean(_config["Caching:IsOpen"]);
+            /// <summary>
+            /// RedisConnectionString
+            /// </summary>
             public static string RedisConnectionString => _config["Caching:RedisConnectionString"];
         }
         /// <summary>

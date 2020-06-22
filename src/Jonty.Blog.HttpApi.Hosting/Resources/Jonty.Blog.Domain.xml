@@ -188,6 +188,16 @@
             Caching
             </summary>
         </member>
+        <member name="P:Jonty.Blog.Domain.Configurations.AppSettings.Caching.IsOpen">
+            <summary>
+            是否开启
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Domain.Configurations.AppSettings.Caching.RedisConnectionString">
+            <summary>
+            RedisConnectionString
+            </summary>
+        </member>
         <member name="T:Jonty.Blog.Domain.Configurations.AppSettings.Hangfire">
             <summary>
             Hangfire

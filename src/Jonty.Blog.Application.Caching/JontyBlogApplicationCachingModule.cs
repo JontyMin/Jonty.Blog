@@ -15,18 +15,22 @@ namespace Jonty.Blog.Application.Caching
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
-            //base.ConfigureServices(context);
-            context.Services.AddStackExchangeRedisCache(options =>
+            if (AppSettings.Caching.IsOpen)
             {
-                options.Configuration = AppSettings.Caching.RedisConnectionString;
+                //base.ConfigureServices(context);
+                context.Services.AddStackExchangeRedisCache(options =>
+                {
+                    options.Configuration = AppSettings.Caching.RedisConnectionString;
                 //实例名
                 //options.InstanceName = "blog-redis";
                 //options.ConfigurationOptions
-            });
-            //var csredis = new CSRedis.CSRedisClient(AppSettings.Caching.RedisConnectionString);
-            //RedisHelper.Initialization(csredis);
+                });
 
-            //context.Services.AddSingleton<IDistributedCache>(new CSRedisCache(RedisHelper.Instance));
+                //var csredis = new CSRedis.CSRedisClient(AppSettings.Caching.RedisConnectionString);
+                //RedisHelper.Initialization(csredis);
+                //context.Services.AddSingleton<IDistributedCache>(new CSRedisCache(RedisHelper.Instance));
+            }
+
         }
     }
 }

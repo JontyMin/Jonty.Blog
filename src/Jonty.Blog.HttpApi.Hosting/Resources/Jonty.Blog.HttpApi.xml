@@ -290,5 +290,25 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.HotNewsController.GetHotNewsSourceAsync">
+            <summary>
+            获取每日热点来源列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.HotNewsController.QueryHotNewsAsync(System.Int32)">
+            <summary>
+            根据来源获取每日热点列表
+            </summary>
+            <param name="sourceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.HotNewsController.BulkInsertHotNewsAsync(Jonty.Blog.Application.Contracts.HotNews.Params.BulkInsertHotNewsInput)">
+            <summary>
+            批量插入每日热点数据
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
