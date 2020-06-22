@@ -177,5 +177,30 @@ namespace Jonty.Blog.Domain.Configurations
 
             public static string SecretKey => _config["BaiduAI:SecretKey"];
         }
+        /// <summary>
+        /// MTA
+        /// </summary>
+        public static class MTA
+        {
+            public static string App_Id => _config["MTA:App_Id"];
+
+            public static string SECRET_KEY => _config["MTA:SECRET_KEY"];
+        }
+        /// <summary>
+        /// 腾讯云API
+        /// </summary>
+        public static class TencentCloud
+        {
+            public static string SecretId => _config["TencentCloud:SecretId"];
+
+            public static string SecretKey => _config["TencentCloud:SecretKey"];
+
+            public static class Captcha
+            {
+                public static string APIKey => _config["TencentCloud:Captcha:AppId"];
+
+                public static string SecretKey => _config["TencentCloud:Captcha:AppSecret"];
+            }
+        }
     }
 }

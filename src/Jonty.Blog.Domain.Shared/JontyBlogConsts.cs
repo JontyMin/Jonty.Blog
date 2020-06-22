@@ -11,9 +11,9 @@
         public const string DbTablePrefix = "jonty_";
 
         /// <summary>
-        /// 语音合成欢迎词
+        /// 语音合成欢迎词大志非才不就，大才非学不成
         /// </summary>
-        public const string GreetWord = "大志非才不就，大才非学不成";
+        public const string GreetWord = "What I cannot create,I do not understand";
         /// <summary>
         /// 缓存过期时间策略
         /// </summary>

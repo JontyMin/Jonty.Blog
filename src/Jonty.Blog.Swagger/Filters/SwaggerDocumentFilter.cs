@@ -19,23 +19,44 @@ namespace Jonty.Blog.Swagger.Filters
            {
                new OpenApiTag
                {
+                   Name = "Auth",
+                   Description = "JWT模式认证授权",
+                   ExternalDocs = new OpenApiExternalDocs{Description = "JSON Web Token"}
+               },
+               new OpenApiTag
+               {
                    Name = "Blog",
                    Description = "个人博客相关接口",
                    ExternalDocs = new OpenApiExternalDocs{Description ="包含: 文章/标签/分类/友链"}
                },
                new OpenApiTag
                {
-                   Name = "HelloWorld",
+                   Name = "Common",
                    Description = "通用公共接口",
                    ExternalDocs = new OpenApiExternalDocs{Description = "包含: 通用的公共接口"}
                },
                new OpenApiTag
                {
-                   Name = "Auth",
-                   Description = "JWT模式认证授权",
-                   ExternalDocs = new OpenApiExternalDocs{Description = "JSON Web Token"}
-               }
-               
+                   Name = "HotNews",
+                   Description = "每日热点接口",
+                   ExternalDocs = new OpenApiExternalDocs { Description = "每日热点来源和列表" }
+               },
+               new OpenApiTag {
+                   Name = "Wallpaper",
+                   Description = "手机壁纸接口",
+                   ExternalDocs = new OpenApiExternalDocs { Description = "Wallpaper" }
+               },
+               new OpenApiTag {
+                   Name = "MTA",
+                   Description = "腾讯移动分析",
+                   ExternalDocs = new OpenApiExternalDocs { Description = "MTA" }
+               },
+               new OpenApiTag {
+                   Name = "TCA",
+                   Description = "腾讯云API",
+                   ExternalDocs = new OpenApiExternalDocs { Description = "CDN/Captcha" }
+               },
+
            };
 
            //按照Name升序排序

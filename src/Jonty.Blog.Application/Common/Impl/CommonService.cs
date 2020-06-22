@@ -343,10 +343,10 @@ namespace Jonty.Blog.Application.Common.Impl
                 // https://ai.baidu.com/ai-doc/SPEECH/
                 var option = new Dictionary<string, object>()
                 {
-                    { "spd", 5 }, // 语速，取值0-9，默认为5中语速
-                    { "pit", 5 }, // 音调，取值0-9，默认为5中语调
+                    { "spd", 4 }, // 语速，取值0-9，默认为5中语速
+                    { "pit", 4 }, // 音调，取值0-9，默认为5中语调
                     { "vol", 7 }, // 音量，取值0-15，默认为5中音量
-                    { "per", 3 }  // 发音人, 0为女声，1为男声，3为情感合成-度逍遥，4为情感合成-度丫丫
+                    { "per", 4 }  // 发音人, 0为女声，1为男声，3为情感合成-度逍遥，4为情感合成-度丫丫
                 };
 
                 var response = _ttsClient.Synthesis(GreetWord.FormatWith(note, content), option);
