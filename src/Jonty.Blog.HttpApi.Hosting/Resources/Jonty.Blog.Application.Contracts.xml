@@ -249,6 +249,37 @@
             限制条数
             </summary>
         </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Wallpaper.Params.BulkInsertWallpaperInput.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Wallpaper.Params.BulkInsertWallpaperInput.Wallpapers">
+            <summary>
+            壁纸列表
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Wallpaper.Params.QueryWallpapersInput.Type">
+            <summary>
+            类型
+            <see cref="T:Jonty.Blog.Domain.Shared.Enum.WallpaperEnum"/>
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Wallpaper.Params.QueryWallpapersInput.Keywords">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Wallpaper.WallpaperDto.Url">
+            <summary>
+            URL
+            </summary>
+        </member>
+        <member name="P:Jonty.Blog.Application.Contracts.Wallpaper.WallpaperDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
         <member name="P:Jonty.Blog.Application.Contracts.Wallpaper.WallpaperJobItem`1.Result">
             <summary>
             <see cref="P:Jonty.Blog.Application.Contracts.Wallpaper.WallpaperJobItem`1.Result"/>

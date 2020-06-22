@@ -310,5 +310,25 @@
             <param name="input"></param>
             <returns></returns>
         </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.WallpaperController.GetWallpaperTypesAsync">
+            <summary>
+            获取所有壁纸类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.WallpaperController.QueryWallpapersAsync(Jonty.Blog.Application.Contracts.Wallpaper.Params.QueryWallpapersInput)">
+            <summary>
+            分页查询壁纸
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.WallpaperController.BulkInsertWallpaperAsync(Jonty.Blog.Application.Contracts.Wallpaper.Params.BulkInsertWallpaperInput)">
+            <summary>
+            批量插入壁纸
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

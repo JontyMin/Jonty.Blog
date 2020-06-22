@@ -2,6 +2,7 @@
 using Jonty.Blog.Application.Contracts.Blog;
 using Jonty.Blog.Application.Contracts.Blog.Params;
 using Jonty.Blog.Application.Contracts.HotNews;
+using Jonty.Blog.Application.Contracts.Wallpaper;
 using Jonty.Blog.Domain.Blog;
 
 namespace Jonty.Blog.Application
@@ -22,6 +23,12 @@ namespace Jonty.Blog.Application
             CreateMap<Domain.HotNews.HotNews, HotNewsDto>();
             CreateMap<HotNewsDto, Domain.HotNews.HotNews>().ForMember(x => x.Id, opt => opt.Ignore())
                 .ForMember(x => x.SourceId, opt => opt.Ignore())
+                .ForMember(x => x.CreateTime, opt => opt.Ignore());
+            
+            CreateMap<Domain.Wallpaper.Wallpaper, WallpaperDto>();
+
+            CreateMap<WallpaperDto, Domain.Wallpaper.Wallpaper>().ForMember(x => x.Id, opt => opt.Ignore())
+                .ForMember(x => x.Type, opt => opt.Ignore())
                 .ForMember(x => x.CreateTime, opt => opt.Ignore());
 
         }
