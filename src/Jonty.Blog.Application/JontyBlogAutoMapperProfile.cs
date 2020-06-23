@@ -11,6 +11,7 @@ namespace Jonty.Blog.Application
     {
         public JontyBlogAutoMapperProfile()
         {
+            CreateMap<FriendLink, FriendLinkDto>();
             CreateMap<Post, PostDto>();
             CreateMap<PostDto, Post>().ForMember(x => x.Id, opt => opt.Ignore());
             CreateMap<EditPostInput, Post>().ForMember(x => x.Id, opt => opt.Ignore());

@@ -84,6 +84,8 @@ Blog ---------- root
 
 ### API展示🔎
 
+[传送门📤](www.jonty.top)
+
 #### 博客前台接口🖊
 
 ![](static/1.png)
@@ -116,8 +118,9 @@ Blog ---------- root
 
 
 
-> 此项目`v1.0.0`版本学习于[阿星 Plus](https://github.com/Jonty),作为个人.NET Core入门学习,感谢星哥指导🤞。
+> 此项目`v1.0.0`版本学习于[阿星 Plus](https://github.com/Meowv/Blog),作为个人.NET Core入门学习,感谢星哥指导🤞。
 
-博客园地址：[阿星Plus](https://www.cnblogs.com/Jonty/p/12896177.html)
+博客园地址：[阿星Plus](https://www.cnblogs.com/meowv/p/12896177.html)
 
 GitHub地址：[阿星Plus](https://github.com/Meowv/Blog)
+
