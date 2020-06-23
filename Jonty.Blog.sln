@@ -38,6 +38,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-items", "solution-
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jonty.Blog.BlazorApp", "src\Jonty.Blog.BlazorApp\Jonty.Blog.BlazorApp.csproj", "{C539E24F-3792-4580-A459-81D17508A676}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +94,10 @@ Global
 		{F8FF189F-2A0A-4993-A2EF-D7832A1659D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8FF189F-2A0A-4993-A2EF-D7832A1659D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8FF189F-2A0A-4993-A2EF-D7832A1659D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C539E24F-3792-4580-A459-81D17508A676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C539E24F-3792-4580-A459-81D17508A676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C539E24F-3792-4580-A459-81D17508A676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C539E24F-3792-4580-A459-81D17508A676}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +115,7 @@ Global
 		{AC8CB12B-9646-4999-8679-1F4356422553} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 		{7054C6CA-F58D-42B3-BE90-7712A16AD7F9} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 		{F8FF189F-2A0A-4993-A2EF-D7832A1659D7} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
+		{C539E24F-3792-4580-A459-81D17508A676} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28315BFD-90E7-4E14-A2EA-F3D23AF4126F}
