@@ -1,7 +1,32 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
-
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+<div class="main">
+	<div class="container">
+		<div class="intro">
+			<div class="avatar">
+				<a href="javascript:;"><img src="head.jpg"></a>
+			</div>
+			<div class="nickname">Jonty</div>
+			<div class="description">
+				<p>
+					大志非才不就，大才非学不成
+					<br>What I cannot create,I do not understand
+				</p>
+			</div>
+			<div class="links">
+				<NavLink class="link-item" title="Posts" href="posts">
+					<i class="iconfont iconread"></i>
+				</NavLink>
+				<NavLink target="_blank" class="link-item" title="API" href="https://www.jonty.top/">
+					<i class="iconfont iconapi"></i>
+				</NavLink>
+				<NavLink class="link-item" title="Manage" href="/account/auth">
+					<i class="iconfont iconcode"></i>
+				</NavLink>
+				<NavLink target="_blank" class="link-item" title="Github" href="https://github.com/Meowv/">
+					<i class="iconfont icongithub"></i>
+				</NavLink>
+			</div>
+		</div>
+	</div>
+</div>

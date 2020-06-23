@@ -38,7 +38,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution-items", "solution-
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jonty.Blog.BlazorApp", "src\Jonty.Blog.BlazorApp\Jonty.Blog.BlazorApp.csproj", "{C539E24F-3792-4580-A459-81D17508A676}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jonty.Blog.BlazorApp", "src\Jonty.Blog.BlazorApp\Jonty.Blog.BlazorApp.csproj", "{C539E24F-3792-4580-A459-81D17508A676}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
