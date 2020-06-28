@@ -21,7 +21,7 @@ namespace Jonty.Blog.Swagger
         /// <summary>
         /// Swagger描述信息
         /// </summary>
-        private static readonly string description = @"<b>Blog</b>：<a target=""_blank"" href=""https://www.jonty.top"">https://www.jonty.top</a> <b>GitHub</b>：<a target=""_blank"" href=""https://github.com/JontyMin/Jonty.Blog"">https://github.com/JontyMin/Jonty.Blog</a> <b>Hangfire</b>：<a target=""_blank"" href=""/hangfire"">任务调度中心</a> <code>Powered by .NET Core 3.1 on Linux</code>";
+        private static readonly string description = @"<b>Blog</b>：<a target=""_blank"" href=""https://www.jonty.top"">https://www.jonty.top</a> <b>GitHub</b>：<a target=""_blank"" href=""https://github.com/JontyMin/Jonty.Blog"">https://github.com/JontyMin/Jonty.Blog</a> <b>Hangfire</b>：<a target=""_blank"" href=""/hangfire"">任务调度中心</a> <code>Powered by .NET Core 3.1 on IIS</code>";
 
         /// <summary>
         /// Swagger分组信息，遍历使用
@@ -73,7 +73,11 @@ namespace Jonty.Blog.Swagger
                 }
             }
         };
-
+        /// <summary>
+        /// AddSwagger
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         public static IServiceCollection AddSwagger(this IServiceCollection services)
         {
             return services.AddSwaggerGen(options =>
@@ -96,6 +100,8 @@ namespace Jonty.Blog.Swagger
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Jonty.Blog.Domain.xml"));
                 options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "Jonty.Blog.Application.Contracts.xml"));
 
+                #region 小绿锁，JWT身份认证
+
                 var security = new OpenApiSecurityScheme
                 {
                     Description = "JWT模式授权，请输入Bearer { Token } 进行身份认证",
@@ -109,12 +115,16 @@ namespace Jonty.Blog.Swagger
                 options.OperationFilter<AddResponseHeadersFilter>();
                 options.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
                 options.OperationFilter<SecurityRequirementsOperationFilter>();
-
+                
+                #endregion
                 //应用Controller的API文档描述信息
                 options.DocumentFilter<SwaggerDocumentFilter>();
             });
         }
-
+        /// <summary>
+        /// UseSwaggerUI
+        /// </summary>
+        /// <param name="app"></param>
         public static void UseSwaggerUI(this IApplicationBuilder app)
         {
             //SwaggerDoc SwaggerEndpoint 对应api版本号相同 v1-v1
@@ -153,7 +163,7 @@ namespace Jonty.Blog.Swagger
         public string Name { get; set; }
 
         /// <summary>
-        /// Microsoft.OpenApi.Models.OpenApiInfo
+        /// <see cref="Microsoft.OpenApi.Models.OpenApiInfo"/>
         /// </summary>
         public OpenApiInfo OpenApiInfo { get; set; }
 

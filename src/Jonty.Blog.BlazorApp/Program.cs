@@ -18,9 +18,16 @@ namespace Jonty.Blog.BlazorApp
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("app");
 
-            builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+           //var baseAddress = "http://api.jonty.top";
+            var baseAddress = "https://localhost:44335/";
+
+            builder.Services.AddTransient(sp => new HttpClient
+            {
+                BaseAddress = new Uri(baseAddress)
+            });
 
             builder.Services.AddSingleton(typeof(Common));
+
 
             await builder.Build().RunAsync();
         }

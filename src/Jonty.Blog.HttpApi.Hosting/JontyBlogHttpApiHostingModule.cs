@@ -141,7 +141,7 @@ namespace Jonty.Blog.Web
             app.UseRouting();
 
             //跨域
-            app.UseCors();
+            app.UseCors(p => p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             // 异常处理中间件
             app.UseMiddleware<ExceptionHandlerMiddleware>();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
 namespace Jonty.Blog.BlazorApp.Commons
@@ -9,10 +10,12 @@ namespace Jonty.Blog.BlazorApp.Commons
     public class Common
     {
         private readonly IJSRuntime _jsRuntime;
+        private readonly NavigationManager _navigationManager;
 
-        public Common(IJSRuntime jsRuntime)
+        public Common(IJSRuntime jsRuntime, NavigationManager navigationManager)
         {
             _jsRuntime = jsRuntime;
+            _navigationManager = navigationManager;
         }
         /// <summary>
         /// 执行无返回值方法
@@ -56,6 +59,48 @@ namespace Jonty.Blog.BlazorApp.Commons
         public async Task<string> GetStorageAsync(string name)
         {
             return await InvokeAsync<string>("window.func.getStorage", name);
+        }
+        /// <summary>
+        /// 跳转指定URL
+        /// </summary>
+        /// <param name="uri"></param>
+        /// <param name="forceLoad">true，绕过路由刷新页面</param>
+        /// <returns></returns>
+        public async Task RenderPage(string url, bool forceLoad = true)
+        {
+            _navigationManager.NavigateTo(url, forceLoad);
+
+            await Task.CompletedTask;
+        }
+        /// <summary>
+        /// 后退
+        /// </summary>
+        /// <returns></returns>
+        public async Task BaskAsync()
+        {
+            await InvokeAsync("window.history.back");
+        }
+        /// <summary>
+        /// 跳转指定URL
+        /// </summary>
+        /// <param name="uri"></param>
+        /// <param name="forceLoad">true，绕过路由刷新页面</param>
+        /// <returns></returns>
+        public async Task NavigateTo(string url, bool forceLoad = false)
+        {
+            _navigationManager.NavigateTo(url, forceLoad);
+
+            await Task.CompletedTask;
+        }
+        /// <summary>
+        /// 获取当前URI对象
+        /// </summary>
+        /// <returns></returns>
+        public async Task<Uri> CurrentUri()
+        {
+            var uri = _navigationManager.ToAbsoluteUri(_navigationManager.Uri);
+
+            return await Task.FromResult(uri);
         }
     }
 }

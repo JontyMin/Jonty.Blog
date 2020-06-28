@@ -70,7 +70,7 @@ namespace Jonty.Blog.Swagger.Filters
            // 当前所有API对象
            var apis = context.ApiDescriptions.GetType()
                .GetField("_source", BindingFlags.NonPublic | BindingFlags.Instance)
-               ?.GetValue(context.ApiDescriptions) as IEnumerable<ApiDescription>;
+               .GetValue(context.ApiDescriptions) as IEnumerable<ApiDescription>;
 
            // 不属于当前分组的所有Controller
            // 注意：配置的OpenApiTag,Name名称要和Controller的Name对应才会生效
