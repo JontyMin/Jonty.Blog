@@ -1,10 +1,9 @@
-﻿<!-- Header.razor -->
-<header>
+﻿<header>
 	<nav class="navbar">
 		<div class="container">
 			<div class="navbar-header header-logo">
-				<NavLink class="menu-item" href="/" Match="NavLinkMatch.All">
-					Jonty.Blog
+				<NavLink class="menu-item" href="/">
+					Jonty
 				</NavLink>
 			</div>
 			<div class="menu navbar-right">
@@ -12,7 +11,11 @@
 				<NavLink class="menu-item" href="categories">Categories</NavLink>
 				<NavLink class="menu-item" href="tags">Tags</NavLink>
 				<NavLink class="menu-item apps" href="apps">Apps</NavLink>
-				<input id="switch_default" type="checkbox" class="switch_default" @onchange="SwitchTheme" checked="@(currentTheme == "Dark")"/>
+				<input id="switch_default"
+					   type="checkbox"
+					   class="switch_default"
+					   @onchange="SwitchTheme"
+					   checked="@(currentTheme == "Dark")" />
 				<label for="switch_default" class="toggleBtn"></label>
 			</div>
 		</div>
@@ -21,7 +24,7 @@
 		<div class="container">
 			<div class="navbar-header">
 				<div>
-					<NavLink class="menu-item" href="" Match="NavLinkMatch.All">Jonty.Blog</NavLink>
+					<NavLink class="menu-item" href="/">Jonty</NavLink>
 					<NavLink @onclick="SwitchTheme">&nbsp;·&nbsp;@currentTheme</NavLink>
 				</div>
 				<div class="menu-toggle" @onclick="ToggleNavMenu">&#9776; Menu</div>
@@ -35,47 +38,55 @@
 		</div>
 	</nav>
 </header>
-@code {
-	/// <summary>
-	/// 下拉菜单是否打开
-	/// </summary>
-	private bool collapseNavMenu = false;
 
-	/// <summary>
-	/// 导航菜单CSS
-	/// </summary>
-	private string NavMenuCssClass => collapseNavMenu ? "active" : null;
+@code { /// <summary>
+			/// 下拉菜单是否打开
+			/// </summary>
+			private bool collapseNavMenu = false;
 
-	/// <summary>
-	/// 显示/隐藏 菜单
-	/// </summary>
-	private void ToggleNavMenu() => collapseNavMenu = !collapseNavMenu;
+			/// <summary>
+			/// 导航菜单CSS
+			/// </summary>
+			private string NavMenuCssClass => collapseNavMenu ? "active" : null;
 
-	/// <summary>
-	/// 当前主题
-	/// </summary>
-	private string currentTheme;
+			/// <summary>
+			/// 当前主题
+			/// </summary>
+			private string currentTheme;
 
-	/// <summary>
-	/// 初始化
-	/// </summary>
-	/// <returns></returns>
-	protected override async Task OnInitializedAsync()
-	{
-		currentTheme = await Common.GetStorageAsync("theme") ?? "Light";
+			/// <summary>
+			/// 显示/隐藏 菜单
+			/// </summary>
+			private void ToggleNavMenu()
+			{
+				collapseNavMenu = !collapseNavMenu;
+			}
 
-		await Common.InvokeAsync("window.func.switchTheme");
-	}
+			/// <summary>
+			/// 初始化
+			/// </summary>
+			/// <returns></returns>
+			protected override async Task OnInitializedAsync()
+			{
+				currentTheme = await Common.GetStorageAsync("theme") ?? "Light";
 
-	/// <summary>
-	/// 切换主题
-	/// </summary>
-	private async Task SwitchTheme()
-	{
-		currentTheme = currentTheme == "Light" ? "Dark" : "Light";
+				await Common.InvokeAsync("window.func.switchTheme");
+			}
 
-		await Common.SetStorageAsync("theme", currentTheme);
+			/// <summary>
+			/// 切换主题
+			/// </summary>
+			private async Task SwitchTheme()
+			{
+				currentTheme = currentTheme == "Light" ? "Dark" : "Light";
 
-		await Common.InvokeAsync("window.func.switchTheme");
-	}
-}
+				await Common.SetStorageAsync("theme", currentTheme);
+
+				await Common.InvokeAsync("window.func.switchTheme");
+
+				var uri = await Common.CurrentUri();
+				if (uri.AbsolutePath.StartsWith("/admin/post"))
+				{
+					await Common.SwitchEditorTheme(currentTheme);
+				}
+			} }

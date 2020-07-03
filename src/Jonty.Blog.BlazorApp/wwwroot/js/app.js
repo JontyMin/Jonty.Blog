@@ -88,7 +88,7 @@ func = {
         });
     },
     _shoowBox: function () {
-        DotNet.invokeMethodAsync('Meowv.Blog.BlazorApp', 'showbox');
+        DotNet.invokeMethodAsync('Jonty.Blog.BlazorApp', 'showbox');
     },
     _loadScript: async function (url) {
         let response = await fetch(url);

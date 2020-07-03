@@ -2,11 +2,16 @@
 
 namespace Jonty.Blog.BlazorApp.Response.Blog
 {
-    public class QueryPostForAdminDto: QueryPostDto
+    public class QueryPostForAdminDto
     {
+        /// <summary>
+        /// 年份
+        /// </summary>
+        public int Year { get; set; }
+
         /// <summary>
         /// Posts
         /// </summary>
-        public new IEnumerable<PostBriefForAdminDto> Posts { get; set; }
+        public IEnumerable<PostBriefForAdminDto> Posts { get; set; }
     }
 }

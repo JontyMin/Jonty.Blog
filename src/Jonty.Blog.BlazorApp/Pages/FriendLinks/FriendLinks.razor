@@ -41,7 +41,7 @@ else
 	/// </summary>
 	protected override async Task OnInitializedAsync()
 	{
-	// 获取数据
+		// 获取数据
 		friendlinks = await Http.GetFromJsonAsync<ServiceResult<IEnumerable<FriendLinkDto>>>($"/blog/friendlinks");
 	}
 }

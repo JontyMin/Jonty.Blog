@@ -6,36 +6,33 @@
 }
 else
 {
-	<div class="container">
-		<div class="post-wrap tags">
-			@if (categoryName != null)
+	<div class="post-wrap tags">
+		@if (categoryName != null)
+		{
+			<h2 class="post-title">-&nbsp;Category&nbsp;·&nbsp;@categoryName&nbsp;-</h2>
+		}
+	</div>
+	<div class="post-wrap archive">
+		@if (posts.Success && posts.Result.Any())
+		{
+			@foreach (var item in posts.Result)
 			{
-				<h2 class="post-title">-&nbsp;Category&nbsp;·&nbsp;@categoryName&nbsp;-</h2>
-			}
-		</div>
-		<div class="post-wrap archive">
-			@if (posts.Success && posts.Result.Any())
-			{
-				@foreach (var item in posts.Result)
+				<h3>@item.Year</h3>
+				@foreach (var post in item.Posts)
 				{
-					<h3>@item.Year</h3>
-					@foreach (var post in item.Posts)
-					{
-						<article class="archive-item">
-							<NavLink href="@("/post"+post.Url)">@post.Title</NavLink>
-							<span class="archive-item-date">@post.CreationTime</span>
-						</article>
-					}
+					<article class="archive-item">
+						<NavLink href="@("/post"+post.Url)">@post.Title</NavLink>
+						<span class="archive-item-date">@post.CreationTime</span>
+					</article>
 				}
 			}
-			else
-			{
-				<ErrorTip />
-			}
-		</div>
+		}
+		else
+		{
+			<ErrorTip />
+		}
 	</div>
 }
-
 
 @code {
 	/// <summary>
@@ -43,6 +40,7 @@ else
 	/// </summary>
 	[Parameter]
 	public string name { get; set; }
+
 	/// <summary>
 	/// 分类名称
 	/// </summary>
@@ -52,6 +50,7 @@ else
 	/// 文章列表数据
 	/// </summary>
 	private ServiceResult<IEnumerable<QueryPostDto>> posts;
+
 	/// <summary>
 	/// 初始化
 	/// </summary>
