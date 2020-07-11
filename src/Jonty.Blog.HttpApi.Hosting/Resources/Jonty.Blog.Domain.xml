@@ -481,6 +481,24 @@
             <param name="hotNews"></param>
             <returns></returns>
         </member>
+        <member name="P:Jonty.Blog.Domain.Soul.ChickenSoup.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="M:Jonty.Blog.Domain.Soul.Repositories.IChickenSoupRepository.GetRandomAsync">
+            <summary>
+            获取一条随机数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.Domain.Soul.Repositories.IChickenSoupRepository.BulkInsertAsync(System.Collections.Generic.IEnumerable{Jonty.Blog.Domain.Soul.ChickenSoup})">
+            <summary>
+            批量插入数据
+            </summary>
+            <param name="chickenSoups"></param>
+            <returns></returns>
+        </member>
         <member name="T:Jonty.Blog.Domain.Wallpaper.Repositories.IWallpaperRepository">
             <summary>
             IWallpaperRepository

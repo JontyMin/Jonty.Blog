@@ -6,38 +6,42 @@
 <AdminLayout>
 	@if (isLoading)
 	{
-<Loading /> }
-				else
-				{
-<div class="post-box">
-	<div class="post-box-item">
-		<input type="text" placeholder="标题" autocomplete="off" @bind="@input.Title" @bind:event="oninput" @onclick="@(() => { Open = false; })" />
-		<input type="text" placeholder="作者" autocomplete="off" @bind="@input.Author" @bind:event="oninput" @onclick="@(() => { Open = false; })" />
-	</div>
-	<div class="post-box-item">
-		<input type="text" placeholder="URL" autocomplete="off" @bind="@input.Url" @bind:event="oninput" @onclick="@(() => { Open = false; })" />
-		<input type="text" placeholder="时间" autocomplete="off" @bind="@input.CreationTime" @bind:format="yyyy-MM-dd HH:mm:sss" @bind:event="oninput" @onclick="@(() => { Open = false; })" />
-	</div>
-	<div id="editor">
-		<textarea style="display:none;">@input.Markdown</textarea>
-	</div>
+		<Loading />
+	}
+	else
+	{
+		<div class="post-box">
+			<div class="post-box-item">
+				<input type="text" placeholder="标题" autocomplete="off" @bind="@input.Title" @bind:event="oninput" @onclick="@(() => { Open = false; })" />
+				<input type="text" placeholder="作者" autocomplete="off" @bind="@input.Author" @bind:event="oninput" @onclick="@(() => { Open = false; })" />
+			</div>
+			<div class="post-box-item">
+				<input type="text" placeholder="URL" autocomplete="off" @bind="@input.Url" @bind:event="oninput" @onclick="@(() => { Open = false; })" />
+				<input type="text" placeholder="时间" autocomplete="off" @bind="@input.CreationTime" @bind:format="yyyy-MM-dd HH:mm:sss" @bind:event="oninput" @onclick="@(() => { Open = false; })" />
+			</div>
+			<div id="editor">
+				<textarea style="display:none;">@input.Markdown</textarea>
+			</div>
 
-	<Box OnClickCallback="@SubmitAsync" Open="@Open" ButtonText="发布">
-		<div class="box-item">
-			<b>分类：</b>
-			@if (categories.Success && categories.Result.Any())
-			{
-@foreach (var item in categories.Result)
-{
-<label><input type="radio" name="category" value="@item.Id" @onchange="@(() => { input.CategoryId = item.Id; })" checked="@(item.Id == input.CategoryId)" />@item.CategoryName</label>}}
+			<Box OnClickCallback="@SubmitAsync" Open="@Open" ButtonText="发布">
+				<div class="box-item">
+					<b>分类：</b>
+					@if (categories.Success && categories.Result.Any())
+					{
+						@foreach (var item in categories.Result)
+						{
+							<label><input type="radio" name="category" value="@item.Id" @onchange="@(() => { input.CategoryId = item.Id; })" checked="@(item.Id == input.CategoryId)" />@item.CategoryName</label>
+						}
+					}
+				</div>
+				<div class="box-item"></div>
+				<div class="box-item">
+					<b>标签：</b>
+					<input type="text" @bind="@tags" @bind:event="oninput" />
+				</div>
+			</Box>
 		</div>
-		<div class="box-item"></div>
-		<div class="box-item">
-			<b>标签：</b>
-			<input type="text" @bind="@tags" @bind:event="oninput" />
-		</div>
-	</Box>
-</div>}
+	}
 </AdminLayout>
 
 @code { /// <summary>

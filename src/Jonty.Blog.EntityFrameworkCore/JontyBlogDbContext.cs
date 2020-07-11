@@ -1,5 +1,6 @@
 ﻿using Jonty.Blog.Domain.Blog;
 using Jonty.Blog.Domain.HotNews;
+using Jonty.Blog.Domain.Soul;
 using Jonty.Blog.Domain.Wallpaper;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.Data;
@@ -28,5 +29,6 @@ namespace Jonty.Blog.EntityFrameworkCore
         public DbSet<FriendLink> FriendLinks { get; set; }
         public DbSet<Wallpaper> Wallpapers { get; set; }
         public DbSet<HotNews> HotNews { get; set; }
+        public DbSet<ChickenSoup> ChickenSoups { get; set; }
     }
 }

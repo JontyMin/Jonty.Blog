@@ -95,7 +95,12 @@ namespace Jonty.Blog.Application.Blog.Impl
                     TagName = item,
                     DisplayName = item
                 });
-            await _tagRepository.BulkInsertAsync(newTags);
+
+            if (newTags.Any())
+            {
+                await _tagRepository.BulkInsertAsync(newTags);
+            }
+            
 
             var postTags = input.Tags.Select(item => new PostTag
             {

@@ -1,5 +1,4 @@
 ﻿@page "/hot"
-@using Jonty.Blog.BlazorApp.Response.HotNews
 
 <div class="hot-container">
 	@if (hotnews == null)
@@ -31,9 +30,7 @@
 		</div>
 	}
 </div>
-
 @code {
-
 	/// <summary>
 	/// 来源Id
 	/// </summary>
@@ -114,5 +111,4 @@
 	{
 		await Common.NavigateTo($"/hot?s={sourceId}");
 	}
-
 }
