@@ -1,13 +1,72 @@
 ﻿@page "/apps"
+@using Jonty.Blog.BlazorApp.Response.App
 
 <div class="post-wrap">
 	<h2 class="post-title">-&nbsp;Apps&nbsp;-</h2>
-	<ul>
-		<li>
-			<a target="_blank" href="#"><h3>⚡~~~吐个槽_留言板~~~⚡</h3></a>
-		</li>
-		<li>
-			<NavLink href="/friendlinks"><h3>💕~~~友情链接~~~💕</h3></NavLink>
-		</li>
-	</ul>
+	<div class="plus-row">
+		<ul>
+			@if (links == null)
+			{
+<Loading /> }
+			else
+			{
+<li class="plus-col-xs12 plus-col-md6">
+	<a target="_blank" href="https://support.qq.com/products/176447"><h3>💬~~~吐个槽_留言板~~~💬</h3></a>
+</li>
+				@foreach (var item in links)
+				{
+<li class="plus-col-xs12 plus-col-md6">
+	<NavLink href="@item.Url"><h3>@item.Title</h3></NavLink>
+</li>}}
+		</ul>
+	</div>
 </div>
+
+@code { private List<Link> links;
+
+			protected override void OnInitialized()
+			{
+				links = new List<Link>
+		{
+			new Link
+			{
+				Title = "🎈~~~手机壁纸~~~🎈",
+				Url = "/wallpaper"
+			},
+			new Link
+			{
+				Title = "🌭~~~每日热点~~~🌭",
+				Url = "/hot"
+			},
+			new Link
+			{
+				Title = "🎮~~~程序员版2048~~~🎮",
+				Url = "/2048"
+			},
+			new Link
+			{
+				Title = "🎵~~~语音合成~~~🎵",
+				Url = "/tts"
+			},
+			new Link
+			{
+				Title = "🔥~~~每日壁纸~~~🔥",
+				Url = "/bing"
+			},
+			new Link
+			{
+				Title = "😍~~~随机妹子图~~~😍",
+				Url = "/girl"
+			},
+			new Link
+			{
+				Title = "🐱~~~随机猫咪图~~~🐱",
+				Url = "/cat"
+			},
+			new Link
+			{
+				Title = "🔗~~~友情链接~~~🔗",
+				Url = "/friendlinks"
+			}
+		};
+			} }

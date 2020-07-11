@@ -87,6 +87,31 @@ func = {
             });
         });
     },
+    render2048Game: async function () {
+	    await this._loadScript('./js/2048.js');
+    },
+    disableKey() {
+	    document.body.oncontextmenu = function () {
+		    self.event.returnValue = false;
+	    };
+	    document.onkeydown = function () {
+		    if (event.ctrlKey && window.event.keyCode == 85) {
+			    return false;
+		    }
+		    if (event.ctrlKey && event.shiftKey && window.event.keyCode == 73) {
+			    return false;
+		    }
+		    if (window.event && window.event.keyCode == 123) {
+			    event.keyCode = 0;
+			    event.returnValue = false;
+		    }
+	    }
+    },
+    openBlobWallpaper(src) {
+	    fetch(src.replace("middle", "max")).then(res => res.blob().then(blob => {
+		    window.open(window.URL.createObjectURL(blob), "_blank");
+	    }));
+    },
     _shoowBox: function () {
         DotNet.invokeMethodAsync('Jonty.Blog.BlazorApp', 'showbox');
     },

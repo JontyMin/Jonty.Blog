@@ -21,7 +21,7 @@ namespace Jonty.Blog.Swagger
         /// <summary>
         /// Swagger描述信息
         /// </summary>
-        private static readonly string description = @"<b>Blog</b>：<a target=""_blank"" href=""https://www.jonty.top"">https://www.jonty.top</a> <b>GitHub</b>：<a target=""_blank"" href=""https://github.com/JontyMin/Jonty.Blog"">https://github.com/JontyMin/Jonty.Blog</a> <b>Hangfire</b>：<a target=""_blank"" href=""/hangfire"">任务调度中心</a> <code>Powered by .NET Core 3.1 on IIS</code>";
+        private static readonly string description = @"<b>Blog</b>：<a target=""_blank"" href=""https://www.jonty.top"">https://www.jonty.top</a> <b>GitHub</b>：<a target=""_blank"" href=""https://github.com/JontyMin/Jonty.Blog"">https://github.com/JontyMin/Jonty.Blog</a> <b>Hangfire</b>：<a target=""_blank"" href=""/hangfire"">任务调度中心</a> <code>Powered by .NET Core 3.1 on Linux</code>";
 
         /// <summary>
         /// Swagger分组信息，遍历使用

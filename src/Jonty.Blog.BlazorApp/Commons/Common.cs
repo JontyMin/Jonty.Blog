@@ -115,5 +115,6 @@ namespace Jonty.Blog.BlazorApp.Commons
 
             await InvokeAsync("window.func.switchEditorTheme");
         }
+
     }
 }

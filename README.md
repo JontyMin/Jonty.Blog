@@ -24,7 +24,7 @@
 - [x] MailKit 邮件提醒
 - [x] 腾讯MTA+验证码
 - [ ] 接口测试
-- [ ] 前台页面
+- [x] 前台页面
 
 ## 项目目录📒
 
@@ -84,47 +84,9 @@ Blog ---------- root
 
 ### 页面展示🔎
 
-俺还没做~~~ 没时间，无从下手，有合适的可以推荐一下📩<501211312@qq.com>
-
 #### 首页 
 
-![](static/7.png)
+https://www.jonty.top
 
-#### 文章列表
-
-![](static/8.png)
-
-
-
-> 分类和标签页大致如此😄
-
-### API展示🔎
-
-#### 博客前台接口🖊
-
-![](static/1.png)
-
-#### JWT身份认证🖍
-
-![](static/2.png)
-
-#### 公共接口🖋
-
-![](static/3.png)
-
-![](static/5.png)
-
-![](static/6.png)
-
-#### 身份认证接口🖌
-
-![](static/4.png)
-
-
-
-> 此项目`v1.0.0`版本学习于[阿星 Plus](https://github.com/Meowv/Blog),作为个人.NET Core入门学习,感谢星哥指导🤞。
-
-博客园地址：[阿星Plus](https://www.cnblogs.com/meowv/p/12896177.html)
-
-GitHub地址：[阿星Plus](https://github.com/Meowv/Blog)
+![](static/index.png)
 
