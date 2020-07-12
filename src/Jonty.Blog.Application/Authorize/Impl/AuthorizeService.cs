@@ -168,7 +168,7 @@ namespace Jonty.Blog.Application.Authorize.Impl
             var name = jwt.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value;
             var email = jwt.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value;
 
-            if (name != "JontyMin" && email != "amazing4677@gmail.com")
+            if (name != "Jonty" && email != "amazing4677@gmail.com")
                 result.IsFailed("token不正确");
 
             return await Task.FromResult(result);
