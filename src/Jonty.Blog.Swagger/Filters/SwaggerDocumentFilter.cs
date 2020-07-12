@@ -56,6 +56,11 @@ namespace Jonty.Blog.Swagger.Filters
                    Description = "腾讯云API",
                    ExternalDocs = new OpenApiExternalDocs { Description = "CDN/Captcha" }
                },
+               new OpenApiTag {
+                   Name = "Soul",
+                   Description = "心灵/毒 鸡汤",
+                   ExternalDocs = new OpenApiExternalDocs { Description = "Soul" }
+               }
 
            };
 

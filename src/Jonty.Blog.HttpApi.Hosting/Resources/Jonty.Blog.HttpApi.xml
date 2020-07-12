@@ -24,6 +24,13 @@
             <param name="access_token"></param>
             <returns></returns>
         </member>
+        <member name="M:Jonty.Blog.Controllers.AuthController.VerifyToken(System.String)">
+            <summary>
+            验证Token是否合法
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
         <member name="M:Jonty.Blog.HttpApi.Controllers.BlogController.QueryPostsForAdminAsync(Jonty.Blog.Application.Contracts.PagingInput)">
             <summary>
             分页查询文章列表
@@ -520,6 +527,19 @@
             <param name="end_date">结束时间（Y-m-d）</param>
             <param name="adtags">渠道id，多个使用“,”间隔</param>
             <param name="idx">查询指标(pv,uv,vv,iv)，使用“,”间隔</param>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.SoulController.GetRandomChickenSoupAsync">
+            <summary>
+            获取鸡汤文本
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Jonty.Blog.HttpApi.Controllers.SoulController.BulkInsertChickenSoupAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            批量插入鸡汤
+            </summary>
+            <param name="list"></param>
             <returns></returns>
         </member>
         <member name="M:Jonty.Blog.HttpApi.Controllers.TCAController.QueryCdnRefreshHistoryAsync(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">

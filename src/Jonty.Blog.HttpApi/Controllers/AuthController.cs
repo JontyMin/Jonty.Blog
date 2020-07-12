@@ -55,5 +55,16 @@ namespace Jonty.Blog.Controllers
         {
             return await _authorizeService.GenerateTokenAsync(access_token);
         }
+        /// <summary>
+        /// 验证Token是否合法
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorize]
+        public async Task<ServiceResult> VerifyToken(string token)
+        {
+            return await _authorizeService.VerifyToken(token);
+        }
     }
 }
