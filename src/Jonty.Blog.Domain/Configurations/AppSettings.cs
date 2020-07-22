@@ -56,6 +56,10 @@ namespace Jonty.Blog.Domain.Configurations
 
             public static string ApplicationName => _config["Github:ApplicationName"];
         }
+        /// <summary>
+        /// 监听端口
+        /// </summary>
+        public static string ListenPort => _config["listenPort"];
 
         /// <summary>
         /// JWT

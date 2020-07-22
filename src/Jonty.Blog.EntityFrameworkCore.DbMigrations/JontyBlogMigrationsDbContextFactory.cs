@@ -10,8 +10,29 @@ namespace Jonty.Blog.EntityFrameworkCore.DbMigrations
         public JontyBlogMigrationsDbContext CreateDbContext(string[] args)
         {
             var configuration = BuildConfiguration();
-            var builder = new DbContextOptionsBuilder<JontyBlogMigrationsDbContext>()
-                .UseMySql(configuration.GetConnectionString("MySql"));
+
+            var EnableDb = configuration["ConnectionStrings:Enable"];
+
+            var builder = new DbContextOptionsBuilder<JontyBlogMigrationsDbContext>();
+
+            switch (EnableDb)
+            {
+                case "MySql":
+                    builder.UseMySql(configuration.GetConnectionString(EnableDb));
+                    break;
+
+                case "SqlServer":
+                    builder.UseSqlServer(configuration.GetConnectionString(EnableDb));
+                    break;
+
+                case "PostgreSql":
+                    builder.UseNpgsql(configuration.GetConnectionString(EnableDb));
+                    break;
+
+                case "Sqlite":
+                    builder.UseSqlite(configuration.GetConnectionString(EnableDb));
+                    break;
+            }
 
             return new JontyBlogMigrationsDbContext(builder.Options);
         }
