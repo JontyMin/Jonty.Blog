@@ -6,6 +6,12 @@
 
 🎯Jonty.Blog个人博客项目，底层基于免费开源跨平台的[.NET Core 3.1](https://docs.microsoft.com/zh-cn/dotnet/core/)开发，使用 [ABP vNext](https://abp.io/)搭建项目框架，支持主流数据库(MSSQL,MySQL,SQLite，MongoDB暂时还不会啊😅)，遵循RESTful接口规范,前端使用Blazor开发。觉得不错请点个小⭐⭐~~~😁
 
+> 此项目学习于[阿星 Plus](https://github.com/Meowv/Blog),作为个人.NET Core入门学习,感谢星哥指导🤞。
+
+博客园地址：[阿星Plus](https://www.cnblogs.com/meowv/p/12896177.html)
+
+GitHub地址：[阿星Plus](https://github.com/Meowv/Blog)
+
 ## 技术栈📑
 
 ---
