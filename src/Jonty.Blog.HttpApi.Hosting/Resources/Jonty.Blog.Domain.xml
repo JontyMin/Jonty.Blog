@@ -178,6 +178,11 @@
             GitHub
             </summary>
         </member>
+        <member name="P:Jonty.Blog.Domain.Configurations.AppSettings.ListenPort">
+            <summary>
+            监听端口
+            </summary>
+        </member>
         <member name="T:Jonty.Blog.Domain.Configurations.AppSettings.JWT">
             <summary>
             JWT

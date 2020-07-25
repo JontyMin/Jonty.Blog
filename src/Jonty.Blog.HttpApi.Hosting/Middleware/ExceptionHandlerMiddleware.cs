@@ -19,6 +19,11 @@ namespace Jonty.Blog.Web.Middleware
             this.next = next;
         }
 
+        /// <summary>
+        /// Invoke
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public async Task Invoke(HttpContext context)
         {
             try

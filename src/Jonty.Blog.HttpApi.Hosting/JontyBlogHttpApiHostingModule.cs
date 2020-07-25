@@ -33,7 +33,6 @@ namespace Jonty.Blog.Web
     [DependsOn(typeof(AbpAspNetCoreModule),
         typeof(AbpAutofacModule),
         typeof(JontyBlogHttpApiModule),
-        typeof(JontyBlogHttpApiModule),
         typeof(JontyBlogSwaggerModule),
         typeof(JontyBlogFrameworkCoreModule),
         typeof(JontyBlogBackgroundJobsModule))]
@@ -42,6 +41,17 @@ namespace Jonty.Blog.Web
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             //base.ConfigureServices(context);
+
+            Configure<MvcOptions>(options =>
+            {
+               var filterMetadata = options.Filters.FirstOrDefault(x => x is ServiceFilterAttribute attribute && attribute.ServiceType.Equals(typeof(AbpExceptionFilter)));
+
+                // 移除 AbpExceptionFilter
+                options.Filters.Remove(filterMetadata);
+
+                // 添加自己实现的 JontyBlogExceptionFilter
+                options.Filters.Add(typeof(JontyBlogExceptionFilter));
+            });
 
             // 身份验证  
             context.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -130,6 +140,12 @@ namespace Jonty.Blog.Web
             }
             //严格传输安全头
             app.UseHsts();
+
+            // 转发将标头代理到当前请求，配合 Nginx 使用，获取用户真实IP
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
 
             // 转发将标头代理到当前请求，配合 Nginx 使用，获取用户真实IP
             app.UseForwardedHeaders(new ForwardedHeadersOptions

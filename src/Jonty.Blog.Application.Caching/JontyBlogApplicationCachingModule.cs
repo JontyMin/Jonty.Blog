@@ -26,9 +26,9 @@ namespace Jonty.Blog.Application.Caching
                 //options.ConfigurationOptions
                 });
 
-                //var csredis = new CSRedis.CSRedisClient(AppSettings.Caching.RedisConnectionString);
-                //RedisHelper.Initialization(csredis);
-                //context.Services.AddSingleton<IDistributedCache>(new CSRedisCache(RedisHelper.Instance));
+                var csredis = new CSRedis.CSRedisClient(AppSettings.Caching.RedisConnectionString);
+                RedisHelper.Initialization(csredis);
+                context.Services.AddSingleton<IDistributedCache>(new CSRedisCache(RedisHelper.Instance));
             }
 
         }
