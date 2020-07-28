@@ -27,8 +27,10 @@
 
 @code { private List<Link> links;
 
-	protected override void OnInitialized()
+	protected override async void OnInitialized()
 	{
+		await Common.SetTitleAsync("Apps");
+
 		links = new List<Link>
 	{
 		

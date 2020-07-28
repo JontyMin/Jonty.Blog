@@ -1,5 +1,4 @@
 ﻿@page "/auth"
-@using Microsoft.AspNetCore.WebUtilities
 
 <Loading />
 
@@ -68,7 +67,7 @@
 						}
 						else
 						{
-							// 没有权限的人，回到首页去吧
+							// 没有权限回首页
 							await Common.NavigateTo("/");
 
 							// 输出提示信息
@@ -77,7 +76,7 @@
 					}
 					else
 					{
-						// 出错了，回到首页去吧
+						// 出错跳回首页
 						await Common.NavigateTo("/");
 
 						// 输出提示信息

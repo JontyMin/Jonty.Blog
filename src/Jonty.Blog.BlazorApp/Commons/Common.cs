@@ -39,6 +39,22 @@ namespace Jonty.Blog.BlazorApp.Commons
         {
             return await _jsRuntime.InvokeAsync<TValue>(identifier, args);
         }
+        /// <summary>
+        /// 设置标题
+        /// </summary>
+        /// <param name="title"></param>
+        /// <returns></returns>
+        public async Task SetTitleAsync(string title = null)
+        {
+            if (string.IsNullOrEmpty(title))
+            {
+                await InvokeAsync("window.func.setTitle", $"🤣阿星Plus⭐⭐⭐");
+            }
+            else
+            {
+                await InvokeAsync("window.func.setTitle", $"🤣{title} - 阿星Plus⭐⭐⭐");
+            }
+        }
 
         /// <summary>
         /// 设置localStorage
